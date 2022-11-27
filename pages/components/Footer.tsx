@@ -6,11 +6,11 @@ import call from "../../public/social/call.png";
 
 const Footer = () => {
   const footerNav = [
-    { id: 1, name: "HOME", link: "#" },
+    { id: 1, name: "HOME", link: "/home" },
     { id: 2, name: "ABOUT US", link: "#" },
     { id: 3, name: "PRODUCT", link: "#" },
     { id: 4, name: "TOUCHPOINT", link: "#" },
-    { id: 5, name: "TESTMONIAL", link: "#" },
+    { id: 5, name: "TESTMONIAL", link: "/Testimonials" },
     { id: 6, name: "INVESTOR INFORMATION", link: "#" },
     { id: 7, name: "NEWS & EVENTS", link: "#" },
     { id: 8, name: "CAREERS", link: "#" },

@@ -76,7 +76,7 @@ const Testimonials = () => {
   };
   return (
     <>
-      <div className="container">
+      <div className="container-fluid">
         <Head>
           <title>Testimonial</title>
           <meta name="description" content="Ifad Autos Tesimonial" />

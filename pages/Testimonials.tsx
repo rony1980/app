@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Face from "./../public/tesimonial/face1.webp";
 import Footer from "./components/Footer";
@@ -14,6 +15,9 @@ const Testimonials = () => {
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla a, nobis placeat vel qui ut quod maxime officia doloribus aspernatur sed eaque id debitis harum. Reiciendis odit culpa assumenda voluptatem!",
       photo: "face1.webp",
+      fb: "https://facebook.com",
+      linkedin: "https://linkedin.com",
+      instagram: "https://instagram.com",
     },
     {
       id: "2",
@@ -21,6 +25,9 @@ const Testimonials = () => {
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla a, nobis placeat vel qui ut quod maxime officia doloribus aspernatur sed eaque id debitis harum. Reiciendis odit culpa assumenda voluptatem!",
       photo: "face2.webp",
+      fb: "https://facebook.com",
+      linkedin: "https://linkedin.com",
+      instagram: "https://instagram.com",
     },
     {
       id: "3",
@@ -28,6 +35,9 @@ const Testimonials = () => {
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla a, nobis placeat vel qui ut quod maxime officia doloribus aspernatur sed eaque id debitis harum. Reiciendis odit culpa assumenda voluptatem!",
       photo: "face3.webp",
+      fb: "https://facebook.com",
+      linkedin: "https://linkedin.com",
+      instagram: "https://instagram.com",
     },
     {
       id: "4",
@@ -35,6 +45,9 @@ const Testimonials = () => {
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla a, nobis placeat vel qui ut quod maxime officia doloribus aspernatur sed eaque id debitis harum. Reiciendis odit culpa assumenda voluptatem!",
       photo: "face4.webp",
+      fb: "https://facebook.com",
+      linkedin: "https://linkedin.com",
+      instagram: "https://instagram.com",
     },
     {
       id: "5",
@@ -42,6 +55,9 @@ const Testimonials = () => {
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla a, nobis placeat vel qui ut quod maxime officia doloribus aspernatur sed eaque id debitis harum. Reiciendis odit culpa assumenda voluptatem!",
       photo: "face1.webp",
+      fb: "https://facebook.com",
+      linkedin: "https://linkedin.com",
+      instagram: "https://instagram.com",
     },
     {
       id: "6",
@@ -49,6 +65,9 @@ const Testimonials = () => {
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla a, nobis placeat vel qui ut quod maxime officia doloribus aspernatur sed eaque id debitis harum. Reiciendis odit culpa assumenda voluptatem!",
       photo: "face2.webp",
+      fb: "https://facebook.com",
+      linkedin: "https://linkedin.com",
+      instagram: "https://instagram.com",
     },
   ];
   const avatar = {
@@ -103,9 +122,15 @@ const Testimonials = () => {
                       className="col-6 d-flex justify-content-evenly text-white"
                       style={avatar}
                     >
-                      <i className="bi bi-facebook"></i>
-                      <i className="bi bi-twitter"></i>
-                      <i className="bi bi-instagram"></i>
+                      <Link href={st.fb}>
+                        <i className="bi bi-facebook text-white"></i>
+                      </Link>
+                      <Link href={st.linkedin}>
+                        <i className="bi bi-twitter text-white"></i>
+                      </Link>
+                      <Link href={st.instagram}>
+                        <i className="bi bi-instagram text-white"></i>
+                      </Link>
                     </div>
                   </div>
                   <div

@@ -13,7 +13,7 @@ import Top from "./components/Top";
 export default function () {
   return (
     <>
-      <div className="container">
+      <div className="container-fluid">
         <Top />
         {/* <Nav /> */}
         <Homeslider />

@@ -3,7 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Face from "./../public/tesimonial/face1.webp";
 import Footer from "./components/Footer";
 import Homeslider from "./components/Homeslider";
 import Top from "./components/Top";
@@ -72,11 +71,18 @@ const Testimonials = () => {
     },
   ];
   const avatar = {
+    borderRadius: "50%",
+    overflow: "hidden",
+    width: "100px",
+    height: "100px",
+    zIndex: "333",
+  };
+  const avatarText = {
     zIndex: "333",
   };
   return (
     <>
-      <div className="container">
+      <div className="container-fluid">
         <Head>
           <title>Testimonial</title>
           <meta name="description" content="Ifad Autos Tesimonial" />
@@ -89,7 +95,7 @@ const Testimonials = () => {
         <Top />
         {/* <Nav /> */}
         <Homeslider />
-        <main>
+        <main className="container">
           <div className="row mt-5">
             <h1 className="text-center brandColor">TESTIMONIALS</h1>
             <div className="col-sm-6 offset-sm-3 mb-4">
@@ -108,33 +114,24 @@ const Testimonials = () => {
                     </h1>
                     <p className="text-center px-4">{st.detail}</p>
                     <div className="row d-flex justify-content-center">
-                      <div
-                        className="d-flex justify-content-center"
-                        style={{
-                          borderRadius: "50%",
-                          overflow: "hidden",
-                          width: "100px",
-                          height: "100px",
-                          zIndex: 333,
-                        }}
-                      >
+                      <div className="position-relative" style={avatar}>
                         <Image
-                          objectFit="cover"
-                          width={100}
-                          height={100}
                           src={`/testimonial/${st.photo}`}
-                          alt="avatar"
+                          alt="photo"
+                          objectFit="cover"
+                          layout="fill"
                         />
                       </div>
+
                       <h6
+                        style={avatarText}
                         className="text-center mt-2 text-white"
-                        style={avatar}
                       >
                         {st.name}
                       </h6>
                       <div
                         className="col-6 d-flex justify-content-evenly text-white"
-                        style={avatar}
+                        style={avatarText}
                       >
                         <Link href={st.fb}>
                           <i className="bi bi-facebook text-white"></i>

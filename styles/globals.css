@@ -32,6 +32,10 @@ button {
 .brandColor {
   color: #f6821f;
 }
+.newslink {
+  color: #000 !important;
+  text-decoration: none;
+}
 .nav-link-ifad {
   color: #888 !important;
 }
@@ -42,6 +46,35 @@ button {
 .nav-link-top {
   color: #000 !important;
   cursor: pointer;
+}
+.nav {
+  color: #000 !important;
+}
+.card {
+  border: none !important;
+}
+.swiper-button-next {
+  color: white !important;
+  background: #f6821f;
+  border-radius: 10rem 0 0 10rem;
+  padding: 40px 20px 40px 40px;
+  right: 0 !important;
+}
+.swiper-button-prev {
+  color: white !important;
+  background: #f6821f;
+  border-radius: 0 10rem 10rem 0;
+  padding: 40px 40px 40px 20px;
+  left: 0 !important;
+}
+.partnerLogo {
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+  cursor: pointer;
+}
+.partnerLogo:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
 }
 
 @media (prefers-color-scheme: dark) {

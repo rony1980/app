@@ -4,7 +4,6 @@ import Client from "./components/Client";
 import Discover from "./components/Discover";
 import Homeslider from "./components/Homeslider";
 import Location from "./components/Location";
-import Nav from "./components/Nav";
 import NewsEvent from "./components/NewsEvent";
 import Social from "./components/Social";
 import Strength from "./components/Strength";
@@ -13,9 +12,8 @@ import Top from "./components/Top";
 export default function () {
   return (
     <>
-      <div className="container">
+      <div className="container-fluid">
         <Top />
-        {/* <Nav /> */}
         <Homeslider />
         <Discover />
         <Strength />

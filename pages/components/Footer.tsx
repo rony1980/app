@@ -7,12 +7,12 @@ import call from "../../public/social/call.png";
 const Footer = () => {
   const footerNav = [
     { id: 1, name: "HOME", link: "/home" },
-    { id: 2, name: "ABOUT US", link: "#" },
-    { id: 3, name: "PRODUCT", link: "#" },
+    { id: 2, name: "ABOUT US", link: "/Mission" },
+    { id: 3, name: "PRODUCT", link: "/Allvehicle" },
     { id: 4, name: "TOUCHPOINT", link: "#" },
     { id: 5, name: "TESTMONIAL", link: "/Testimonials" },
     { id: 6, name: "INVESTOR INFORMATION", link: "#" },
-    { id: 7, name: "NEWS & EVENTS", link: "#" },
+    { id: 7, name: "NEWS & EVENTS", link: "/news/1" },
     { id: 8, name: "CAREERS", link: "#" },
     { id: 9, name: "CONTACT", link: "#" },
   ];

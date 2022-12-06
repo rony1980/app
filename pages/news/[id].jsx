@@ -33,7 +33,7 @@ const Detail = ({ rony }) => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>News & Events</title>
+          <title>{rony.title}</title>
           <meta name="description" content="Ifad Autos Tesimonial" />
           <link rel="icon" href="/favicon.ico" />
           <link

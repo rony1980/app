@@ -82,14 +82,14 @@ const SingleVehicle = () => {
           </div>
           <div className="col-sm-6">
             <div className="row mb-4">
-              <div className="col-sm-3 col-6">
+              <div className="col-sm-4 col-6 me-sm-3">
                 <div className="row">
                   <button type="button" className="btn btn-outline-secondary">
                     Prodduct Brochure
                   </button>
                 </div>
               </div>
-              <div className="col-sm-3 col-6 ms-3">
+              <div className="col-sm-4 col-6">
                 <div className="row">
                   <button type="button" className="btn btn-outline-secondary">
                     Sales Inquery

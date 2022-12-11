@@ -12,7 +12,7 @@ const Recentnews = () => {
     <div>
       <h4 className="brandColor fw-bold">Recent Posts</h4>
       {news.slice(0, 5).map((ron) => (
-        <div className="row border-bottom py-4">
+        <div className="row border-bottom py-4" key={ron.id}>
           <div className="col-3 position-relative">
             <Image
               className="position-relative"

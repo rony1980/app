@@ -71,7 +71,7 @@ const Allvehicle = () => {
               <div className="row row-cols-1 row-cols-sm-3 g-4">
                 {vehicle.map((ron) => {
                   return (
-                    <div className="col">
+                    <div className="col" key={ron.id}>
                       <div className="card h-100">
                         <Image
                           className="card-img-top img-fluid"

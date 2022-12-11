@@ -9,7 +9,7 @@ import Social from "./components/Social";
 import Strength from "./components/Strength";
 import Footer from "./components/Footer";
 import Top from "./components/Top";
-export default function () {
+export default function home() {
   return (
     <>
       <div className="container-fluid">

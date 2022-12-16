@@ -132,6 +132,12 @@ textarea,
 input:focus {
   outline: none;
 }
+.navbar-toggler {
+  border: none !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
 
 @media (prefers-color-scheme: dark) {
   html {

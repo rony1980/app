@@ -18,7 +18,7 @@ export default function Strength() {
     transform: "skew(54deg, -10deg)",
     background: "#f6821f",
     zIndex: "-99",
-    top: "280px",
+    top: "240px",
   };
   return (
     <div className="row my-5 position-relative overflow-hidden pb-5">
@@ -26,7 +26,7 @@ export default function Strength() {
       <h1 className="brandColor text-center fw-bold mb-5">
         Countrywide Our Strength
       </h1>
-      <div className="row row-cols-1 row-cols-sm-3 gx-5">
+      <div className="row row-cols-1 row-cols-sm-3 pe-0">
         {strength.map((st) => {
           return (
             <div className="col mb-sm-0 mb-4" key={st.id}>

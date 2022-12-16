@@ -35,7 +35,7 @@ const Top = () => {
       {
         id: "6",
         name: "Partners",
-        slug: "#Partners",
+        slug: "Partners",
       },
       {
         id: "7",
@@ -51,58 +51,98 @@ const Top = () => {
 
   return (
     <div id="Top" className="row py-4 align-items-center">
-      <div className="col-sm-2">
+      <div className="col-sm-2 col-12">
         <Link href="/">
           <Image className="img-fluid" src={Logo} alt="Logo" />
         </Link>
       </div>
-      <div className="col-sm-7">
-        <nav className="nav justify-content-center">
-          <span
-            className="nav-link nav-link-top dropdown-toggle"
-            data-bs-toggle="dropdown"
+      <div className="col-7">
+        <nav className="navbar navbar-expand-lg">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
             aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            About Us
-            <ul className="dropdown-menu">
-              {menu.About.map((item: any) => {
-                return (
-                  <li key={item.id}>
-                    <Link className="dropdown-item" href={item.slug}>
-                      {item.name}
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <div className="row">
+              <div className="col-sm-12">
+                <ul className="navbar-nav d-flex justify-content-center">
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      About
+                    </a>
+                    <ul className="dropdown-menu">
+                      {menu.About.map((item: any) => {
+                        return (
+                          <li key={item.id}>
+                            <Link className="dropdown-item" href={item.slug}>
+                              {item.name}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link nav-link-top" href="#touchpoint">
+                      Touch Point
                     </Link>
                   </li>
-                );
-              })}
-            </ul>
-          </span>
-
-          <Link className="nav-link nav-link-top" href="#touchpoint">
-            Touch Point
-          </Link>
-          <Link className="nav-link nav-link-top" href="#">
-            Investor Information
-          </Link>
-          <Link className="nav-link nav-link-top" href="/Contact">
-            Contact Us
-          </Link>
-        </nav>
-        <nav className="nav justify-content-center">
-          <Link className="nav-link nav-link-top" href="/Allvehicle">
-            Trucks
-          </Link>
-          <Link className="nav-link nav-link-top" href="/Allvehicle">
-            Buses
-          </Link>
-          <Link className="nav-link nav-link-top" href="/Allvehicle">
-            Pickup
-          </Link>
-          <Link className="nav-link nav-link-top" href="/Allvehicle">
-            Dump Truck
-          </Link>
-          <Link className="nav-link nav-link-top" href="/Allvehicle">
-            Special Vehicle
-          </Link>
+                  <li className="nav-item">
+                    <Link className="nav-link nav-link-top" href="#">
+                      Investor Information
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link nav-link-top" href="/Contact">
+                      Contact Us
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-sm-12">
+                <ul className="navbar-nav d-flex justify-content-center">
+                  <li className="nav-item">
+                    <Link className="nav-link nav-link-top" href="/Allvehicle">
+                      Buses
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link nav-link-top" href="/Allvehicle">
+                      Trucks
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link nav-link-top" href="/Allvehicle">
+                      Pickup
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link nav-link-top" href="/Allvehicle">
+                      Dump Truck
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link nav-link-top" href="/Allvehicle">
+                      Special Vehicle
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </nav>
       </div>
       <div className="col-sm-3">

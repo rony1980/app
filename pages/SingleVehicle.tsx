@@ -13,14 +13,14 @@ import Head from "next/head";
 
 const SingleVehicle = () => {
   const banner = [
-    { id: "1", name: "banner1" },
-    { id: "2", name: "banner2" },
-    { id: "3", name: "banner3" },
+    { id: "1", name: "banner1.webp" },
+    { id: "2", name: "banner2.webp" },
+    { id: "3", name: "banner3.webp" },
   ];
   const productImage = [
-    { id: "1", image: "v1" },
-    { id: "2", image: "v2" },
-    { id: "3", image: "v3" },
+    { id: "1", image: "bus1.webp" },
+    { id: "2", image: "bus2.webp" },
+    { id: "3", image: "bus3.webp" },
   ];
 
   //Bootstrap js
@@ -54,7 +54,7 @@ const SingleVehicle = () => {
                   <SwiperSlide key={rony.id}>
                     <Image
                       className="img-fluid"
-                      src={`/product/${rony.name}.webp`}
+                      src={`/product/${rony.name}`}
                       alt="car"
                       width={1920}
                       height={0}
@@ -74,7 +74,7 @@ const SingleVehicle = () => {
               {productImage.map((slide) => {
                 return (
                   <div key={slide.id}>
-                    <img src={`/discover/${slide.image}.png`} alt="Product" />
+                    <img src={`/product/${slide.image}`} alt="Product" />
                   </div>
                 );
               })}

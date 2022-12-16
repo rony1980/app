@@ -17,6 +17,14 @@ export default function Location() {
       >
         <div className="row py-3">
           <select className="form-select" aria-label="Default select example">
+            <option defaultValue="0">Select Category</option>
+            <option value="1">Sales</option>
+            <option value="2">Service</option>
+            <option value="3">Layparts</option>
+          </select>
+        </div>
+        <div className="row mb-3">
+          <select className="form-select" aria-label="Default select example">
             <option defaultValue="0">Select Division</option>
             <option value="1">Dhaka</option>
             <option value="2">Chittagong</option>

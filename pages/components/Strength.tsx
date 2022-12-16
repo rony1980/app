@@ -11,7 +11,6 @@ export default function Strength() {
       texts: "350 LayParts Retail Outlets",
       icon: "3",
     },
-    { id: 4, name: "Dealers", texts: "10 Dealers", icon: "4" },
   ];
   const bg = {
     width: "100%",
@@ -27,7 +26,7 @@ export default function Strength() {
       <h1 className="brandColor text-center fw-bold mb-5">
         Countrywide Our Strength
       </h1>
-      <div className="row row-cols-1 row-cols-sm-4 gx-5">
+      <div className="row row-cols-1 row-cols-sm-3 gx-5">
         {strength.map((st) => {
           return (
             <div className="col mb-sm-0 mb-4" key={st.id}>

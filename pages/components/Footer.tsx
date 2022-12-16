@@ -6,7 +6,7 @@ import call from "../../public/social/call.png";
 
 const Footer = () => {
   const footerNav = [
-    { id: 1, name: "HOME", link: "/home" },
+    { id: 1, name: "HOME", link: "/" },
     { id: 2, name: "ABOUT US", link: "/Mission" },
     { id: 3, name: "PRODUCT", link: "/Allvehicle" },
     { id: 4, name: "TOUCHPOINT", link: "#" },
@@ -14,7 +14,7 @@ const Footer = () => {
     { id: 6, name: "INVESTOR INFORMATION", link: "#" },
     { id: 7, name: "NEWS & EVENTS", link: "/news/1" },
     { id: 8, name: "CAREERS", link: "#" },
-    { id: 9, name: "CONTACT", link: "#" },
+    { id: 9, name: "CONTACT", link: "/Contact" },
   ];
   const menu = [
     { id: 10, name: "TERM OF USE", link: "#" },
@@ -57,7 +57,7 @@ const Footer = () => {
                             return (
                               <li key={nav.id} className="nav-item">
                                 <Link
-                                  className="nav-link nav-link-ifad"
+                                  className="nav-link-ifad"
                                   aria-current="page"
                                   href={nav.link}
                                 >
@@ -88,7 +88,7 @@ const Footer = () => {
                         return (
                           <li key={nav.id} className="nav-item">
                             <Link
-                              className="nav-link nav-link-ifad"
+                              className="nav-link-ifad"
                               aria-current="page"
                               href={nav.link}
                             >

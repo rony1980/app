@@ -21,6 +21,9 @@ button {
   background: #f6821f !important;
   color: white !important;
 }
+.btn-warning {
+  background: #f6821f !important;
+}
 
 * {
   box-sizing: border-box;
@@ -37,7 +40,9 @@ button {
   text-decoration: none;
 }
 .nav-link-ifad {
-  color: #888 !important;
+  color: #ccc !important;
+  padding: 5px;
+  text-decoration: none;
 }
 .nav-link-ifad:after {
   content: "|";
@@ -77,11 +82,55 @@ button {
   -webkit-filter: grayscale(0%);
 }
 .nav-link.active {
-  background: #f6821f !important;
-  color: white !important;
+  background: none !important;
+  color: #f6821f !important;
 }
 .nav-link {
-  color: #f6821f !important;
+  color: #000 !important;
+}
+/* input icons */
+.inner-addon {
+  position: relative;
+}
+.inner-addon .bi {
+  position: absolute;
+  padding: 5px;
+  pointer-events: none;
+}
+.left-addon .bi {
+  left: 0px;
+}
+.right-addon .bi {
+  right: 0px;
+}
+
+.left-addon input {
+  padding-left: 50px;
+}
+.right-addon input {
+  padding-right: 30px;
+}
+.customInput {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #f6821f;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: rgba(255, 255, 255, 0);
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea,
+input:focus {
+  outline: none;
 }
 
 @media (prefers-color-scheme: dark) {

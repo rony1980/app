@@ -54,7 +54,7 @@ const Allvehicle = () => {
   ];
   return (
     <>
-      <div className="container">
+      <div className="container-fluid">
         <Head>
           <title>Testimonial</title>
           <meta name="description" content="All" />
@@ -62,6 +62,8 @@ const Allvehicle = () => {
         </Head>
         <Top />
         <Homeslider />
+      </div>
+      <div className="container">
         <main>
           <div className="row my-5">
             <div className="col-sm-3">
@@ -71,7 +73,7 @@ const Allvehicle = () => {
               <div className="row row-cols-1 row-cols-sm-3 g-4">
                 {vehicle.map((ron) => {
                   return (
-                    <div className="col">
+                    <div className="col" key={ron.id}>
                       <div className="card h-100">
                         <Image
                           className="card-img-top img-fluid"

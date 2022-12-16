@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function TouchPoint() {
   return (
-    <div className="col-sm-12">
+    <div className="col-sm-12" id="touchpoint">
       {/* TouchPoint */}
       <h1 className="brandColor text-center fw-bold my-5">Touch Point</h1>
       <div

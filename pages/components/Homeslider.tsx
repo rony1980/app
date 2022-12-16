@@ -33,6 +33,7 @@ export default function Homeslider() {
                   alt="car"
                   width={1920}
                   height={0}
+                  priority
                 />
               </SwiperSlide>
             );

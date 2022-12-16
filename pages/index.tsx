@@ -9,7 +9,9 @@ import Social from "./components/Social";
 import Strength from "./components/Strength";
 import Footer from "./components/Footer";
 import Top from "./components/Top";
-export default function () {
+import React from "react";
+
+const index = () => {
   return (
     <>
       <div className="container-fluid">
@@ -27,4 +29,6 @@ export default function () {
       <Footer />
     </>
   );
-}
+};
+
+export default index;

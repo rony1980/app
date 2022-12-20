@@ -44,7 +44,7 @@ const Mission = () => {
         <h1 className="brandColor text-center my-5 fw-bold">
           Mission & Vision
         </h1>
-        <div className="row mb-5">
+        <div className="mb-5">
           {vision.map((vision, i) => {
             return (
               <div key={i} className="row d-flex align-items-center">
@@ -59,7 +59,7 @@ const Mission = () => {
                         alt="image"
                       />
                     </div>
-                    <div className="col-sm-6 order-2 px-5">
+                    <div className="col-sm-6 order-sm-2 order-1 px-5 my-5">
                       <h4 className="brandColor fw-bold text-center">
                         {vision.heading}
                       </h4>
@@ -77,7 +77,7 @@ const Mission = () => {
                         alt="image"
                       />
                     </div>
-                    <div className="col-sm-6 order-1 px-5">
+                    <div className="col-sm-6 order-sm-1 order-2 px-5 my-5">
                       <h4 className="brandColor fw-bold text-center">
                         {vision.heading}
                       </h4>

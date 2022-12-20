@@ -9,18 +9,18 @@ const Footer = () => {
     { id: 1, name: "HOME", link: "/" },
     { id: 2, name: "ABOUT US", link: "/Mission" },
     { id: 3, name: "PRODUCT", link: "/Allvehicle" },
-    { id: 4, name: "TOUCHPOINT", link: "#" },
+    { id: 4, name: "TOUCHPOINT", link: "/Touchpoint" },
     { id: 5, name: "TESTMONIAL", link: "/Testimonials" },
-    { id: 6, name: "INVESTOR INFORMATION", link: "#" },
+    { id: 6, name: "INVESTOR INFORMATION", link: "/Investor" },
     { id: 7, name: "NEWS & EVENTS", link: "/news/1" },
-    { id: 8, name: "CAREERS", link: "#" },
+    { id: 8, name: "CAREERS", link: "/Career" },
     { id: 9, name: "CONTACT", link: "/Contact" },
   ];
   const menu = [
-    { id: 10, name: "TERM OF USE", link: "#" },
-    { id: 11, name: "DESCLAIMER", link: "#" },
-    { id: 12, name: "PRIVACY POLICY", link: "#" },
-    { id: 13, name: "SITEMAP", link: "#" },
+    { id: 10, name: "TERM OF USE", link: "/Terms" },
+    { id: 11, name: "DESCLAIMER", link: "Desclaimer" },
+    { id: 12, name: "PRIVACY POLICY", link: "/Privacypolicy" },
+    { id: 13, name: "SITEMAP", link: "/Sitemap" },
   ];
   const Scrollspy = {
     bottom: "20px",
@@ -71,7 +71,7 @@ const Footer = () => {
                     </div>
                   </nav>
                   <div className="position-absolute" style={Scrollspy}>
-                    <Link href={"#Top"}>
+                    <Link href={"#Top"} scroll={false}>
                       <i className="bi bi-arrow-up-square-fill fs-1 text-warning"></i>
                     </Link>
                   </div>

@@ -96,12 +96,16 @@ const Top = () => {
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link nav-link-top" href="#touchpoint">
+                    <Link
+                      className="nav-link nav-link-top"
+                      href="#touchpoint"
+                      scroll={false}
+                    >
                       Touch Point
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link nav-link-top" href="#">
+                    <Link className="nav-link nav-link-top" href="/Investor">
                       Investor Information
                     </Link>
                   </li>

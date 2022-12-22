@@ -57,7 +57,7 @@ const Top = () => {
         </Link>
         <div className="position-relative d-sm-none d-block">
             <div className="call">
-              <Image width={150} height={62} src={call} alt="Call" />
+              <Image width={100} height={40} src={call} alt="Call" />
             </div>
           </div>
       </div>

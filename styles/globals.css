@@ -148,14 +148,14 @@ input:focus {
 }
 .call {
   position: absolute;
-  width: 150px;
+  width: 100px;
   top: -24px;
   right: 0;
 }
 .searchBoxc {
   position: absolute;
   top: -30px;
-  right: 0;
+  right: -100px;
   transform: translate(-200px, 0%);
   background: #f68422;
   border-radius: 40px;

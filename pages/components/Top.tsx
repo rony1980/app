@@ -51,7 +51,7 @@ const Top = () => {
 
   return (
     <div id="Top" className="row align-items-center pb-sm-0 pb-5">
-      <div className="col">
+      <div className="col-sm-3 col">
         <Link href="/">
           <Image className="img-fluid" src={Logo} alt="Logo" />
         </Link>
@@ -75,6 +75,7 @@ const Top = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+          <div className="container-fluid">
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <div className="row">
               <div className="col-sm-12">
@@ -153,11 +154,12 @@ const Top = () => {
               </div>
             </div>
           </div>
+          </div>
         </nav>
       </div>
       
          <div className="w-100 d-sm-none d-block"></div>
-          <div className="col-sm-4 col-12">
+          <div className="col-sm-3 col-12">
           <div className="position-relative">
             <div className="searchBoxc">
               <input className="searchInputc" type="text" name="" placeholder="Search" />

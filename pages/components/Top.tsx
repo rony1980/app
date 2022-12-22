@@ -168,7 +168,7 @@ const Top = () => {
             </div>
           <div className="position-relative d-sm-block d-none">
             <div className="call">
-              <Image width={150} height={62} src={call} alt="Call" />
+              <Image width={100} height={41} src={call} alt="Call" />
             </div>
           </div>
           </div>

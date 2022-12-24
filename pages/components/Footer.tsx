@@ -13,7 +13,7 @@ const Footer = () => {
     { id: 5, name: "TESTMONIAL", link: "/Testimonials" },
     { id: 6, name: "INVESTOR INFORMATION", link: "/Investor" },
     { id: 7, name: "NEWS & EVENTS", link: "/news/1" },
-    { id: 8, name: "CAREERS", link: "/Career" },
+    { id: 8, name: "CAREERS", link: "https://ifadgroup.com/career" },
     { id: 9, name: "CONTACT", link: "/Contact" },
   ];
   const menu = [

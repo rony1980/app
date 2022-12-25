@@ -51,6 +51,14 @@ button {
 .nav-link-top {
   color: #000 !important;
   cursor: pointer;
+  -webkit-transition: ease all 0.5s !important;
+  transition: ease all 0.5s !important;
+  text-shadow: 1px 1px 1px #ccc;
+}
+.nav-link-top:hover {
+  color: #f6821f !important;
+  font-weight: bold;
+  text-shadow: 0px 0px 1px #000;
 }
 .nav {
   color: #000 !important;
@@ -138,6 +146,70 @@ input:focus {
 .navbar-toggler:focus {
   box-shadow: none !important;
 }
+.call {
+  position: absolute;
+  width: 100px;
+  top: -29px;
+  right: 0;
+}
+.searchBoxc {
+  position: absolute;
+  top: -26px;
+  right: -100px;
+  transform: translate(-200px, 0%);
+  background: #f68422;
+  border-radius: 40px;
+  padding: 5px;
+}
+
+.searchBoxc:hover > .searchInputc {
+  width: 200px;
+  padding: 0 6px;
+}
+
+.searchBoxc:hover > .searchButtonc {
+  background: white;
+  color: #2f3640;
+}
+
+.searchButtonc {
+  color: #f68422 !important;
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.searchInputc {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 30px;
+  width: 0px;
+}
+.valueBox {
+  width: 100%;
+  border-radius: 20px;
+  background: #f68422;
+  min-height: 300px;
+}
+.valueNumberBox {
+  width: 60px;
+  height: 60px;
+  background: #666;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -146,5 +218,59 @@ input:focus {
   body {
     color: white;
     background: black;
+  }
+}
+@media screen and (max-width: 600px) {
+  .searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+  }
+  .searchBoxc {
+    position: absolute;
+    top: -30px;
+    right: 200px;
+    transform: translate(200px, 0%);
+    background: #f68422;
+    border-radius: 40px;
+    padding: 10px;
+  }
+  .searchBoxc:hover > .searchInputc {
+    width: 100px;
+    padding: 0 6px;
+  }
+
+  .searchBoxc:hover > .searchButtonc {
+    background: white;
+    color: #2f3640;
+  }
+
+  .searchButtonc {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+  }
+  .searchInputc {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+  }
+  .call {
+    position: absolute;
+    top: -50px;
+    right: 0;
   }
 }

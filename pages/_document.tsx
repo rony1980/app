@@ -10,6 +10,13 @@ export default function Document() {
         />
       </Head>
       <body>
+        <div id="fb-root"></div>
+        <script
+          async
+          defer
+          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0&appId=1559583837846448&autoLogAppEvents=1"
+          nonce="WlJhp4mk"
+        ></script>
         <Main />
         <NextScript />
       </body>

@@ -81,6 +81,13 @@ const Contact = () => {
               </div>
             </div>
           </form>
+          <div className="row mt-5">
+            <div className="col">
+              ABCD<br></br>
+              House 00, Flat 00, Road 00/A Dhaka 1234<br></br>
+              <i className="bi bi-telephone-outbound"></i> +88 0123456789
+            </div>
+          </div>
         </div>
       </div>
       <Footer />

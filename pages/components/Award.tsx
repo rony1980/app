@@ -5,10 +5,6 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import background from "../../public/backgrounds/background.png";
-import TouchPoint from "./TouchPoint";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
 export default function Award() {
   const award = [
@@ -16,30 +12,8 @@ export default function Award() {
     { id: 2, image: "a2" },
     { id: 3, image: "a1" },
   ];
-  // ForAnimation
-  const boxVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-    hidden: { opacity: 0, scale: 0 },
-  };
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
-  // Animation end
+  
   return (
-    <motion.div
-      className="box"
-      ref={ref}
-      variants={boxVariant}
-      initial="hidden"
-      animate={control}
-    >
       <div
         className="row pt-5 position-relative"
         style={{ backgroundImage: `url(${background.src})` }}
@@ -95,6 +69,5 @@ export default function Award() {
           </Swiper>
         </div>
       </div>
-    </motion.div>
   );
 }

@@ -20,12 +20,11 @@ const index = () => {
         <Discover />
         <Strength />
         <Client />
-        <NewsEvent />
+        <NewsEvent /> 
         <Award />
         <TouchPoint />
         <Social />
       </div>
-
       <Footer />
     </>
   );

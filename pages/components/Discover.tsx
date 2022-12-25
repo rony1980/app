@@ -6,9 +6,6 @@ import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.css";
 import background from "../../public/backgrounds/background.png";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
 export default function Discover() {
   const product = {
@@ -103,31 +100,7 @@ export default function Discover() {
       },
     ],
   };
-  // ForAnimation
-  const boxVariant = {
-    visible: {
-      animation: "tracking-in-expand-forward-bottom",
-      transform: "translateY(0px)",
-      transition: { duration: 1 },
-      opacity: 1,
-    },
-    hidden: {
-      animation: "tracking-in-expand-forward-bottom",
-      transform: "translateY(500px)",
-      opacity: 0,
-    },
-  };
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
-  // Animation end
+  
   return (
     <div
       className="row py-5"
@@ -136,13 +109,6 @@ export default function Discover() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <motion.div
-        className="box"
-        ref={ref}
-        variants={boxVariant}
-        initial="hidden"
-        animate={control}
-      >
         <h1 className="brandColor text-center fw-bold">Discover The Range</h1>
         <div className="d-flex justify-content-center mt-5">
           <ul
@@ -404,7 +370,6 @@ export default function Discover() {
             ...
           </div>
         </div>
-      </motion.div>
     </div>
   );
 }

@@ -5,9 +5,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 export default function NewsEvent() {
   const news = [
     { id: 1, image: "n1" },
@@ -22,41 +19,10 @@ export default function NewsEvent() {
     backgroundSize: "cover",
   };
   const playButton = {};
-  // ForAnimation
-  const boxVariant = {
-    visible: {
-      animation: "slide-Left",
-      transform: "translateX(0px)",
-      transition: { duration: 1 },
-      opacity: 1,
-    },
-    hidden: {
-      animation: "slide-Left",
-      transform: "translateX(-500px)",
-      opacity: 0,
-    },
-  };
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
-  // Animation end
+ 
   return (
     <div className="row py-5 position-relative" style={background}>
       <h1 className="brandColor text-center fw-bold">News & Events</h1>
-      <motion.div
-        className="box"
-        ref={ref}
-        variants={boxVariant}
-        initial="hidden"
-        animate={control}
-      >
         <div className="swiper">
           <Swiper
             modules={[Navigation]}
@@ -106,7 +72,6 @@ export default function NewsEvent() {
             })}
           </Swiper>
         </div>
-      </motion.div>
     </div>
   );
 }

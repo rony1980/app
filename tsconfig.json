@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -19,10 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/news/Recentnews.jss",
-    "pages/Investor2.js",
-    "pages/Investor.jsx",
-    "pages/Values.js"
-  ],
+    "pages/news/Recentnews.jss"
+, "pages/Investor.jsx"  ],
   "exclude": ["node_modules"]
 }

@@ -25,7 +25,7 @@ const Top = () => {
       {
         id: "4",
         name: "Our Story",
-        slug: "/Story",
+        slug: "/History",
       },
       {
         id: "5",
@@ -56,10 +56,10 @@ const Top = () => {
           <Image className="img-fluid" src={Logo} alt="Logo" />
         </Link>
         <div className="position-relative d-sm-none d-block">
-            <div className="call">
-              <Image width={100} height={40} src={call} alt="Call" />
-            </div>
+          <div className="call">
+            <Image width={100} height={40} src={call} alt="Call" />
           </div>
+        </div>
       </div>
       <div className="w-100 d-sm-none d-block"></div>
       <div className="col">
@@ -76,106 +76,125 @@ const Top = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="container-fluid">
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <div className="row">
-              <div className="col-sm-12">
-                <ul className="navbar-nav d-flex justify-content-center">
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      About
-                    </a>
-                    <ul className="dropdown-menu">
-                      {menu.About.map((item: any) => {
-                        return (
-                          <li key={item.id}>
-                            <Link className="dropdown-item" href={item.slug}>
-                              {item.name}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </li>
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link nav-link-top"
-                      href="#touchpoint"
-                      scroll={false}
-                    >
-                      Touch Point
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link nav-link-top" href="/Investor">
-                      Investor Information
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link nav-link-top" href="/Contact">
-                      Contact Us
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-sm-12">
-                <ul className="navbar-nav d-flex justify-content-center fs-4">
-                  <li className="nav-item">
-                    <Link className="nav-link nav-link-top" href="/Allvehicle">
-                      Buses
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link nav-link-top" href="/Allvehicle">
-                      Trucks
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link nav-link-top" href="/Allvehicle">
-                      Pickup
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link nav-link-top" href="/Allvehicle">
-                      Dump Truck
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link nav-link-top" href="/Allvehicle">
-                      Special Vehicle
-                    </Link>
-                  </li>
-                </ul>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+              <div className="row">
+                <div className="col-sm-12">
+                  <ul className="navbar-nav d-flex justify-content-center">
+                    <li className="nav-item dropdown">
+                      <a
+                        className="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        About
+                      </a>
+                      <ul className="dropdown-menu">
+                        {menu.About.map((item: any) => {
+                          return (
+                            <li key={item.id}>
+                              <Link className="dropdown-item" href={item.slug}>
+                                {item.name}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link nav-link-top"
+                        href="#touchpoint"
+                        scroll={false}
+                      >
+                        Touch Point
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link nav-link-top" href="/Investor">
+                        Investor Information
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link nav-link-top" href="/Contact">
+                        Contact Us
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-sm-12">
+                  <ul className="navbar-nav d-flex justify-content-center fs-4">
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link nav-link-top"
+                        href="/Allvehicle"
+                      >
+                        Buses
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link nav-link-top"
+                        href="/Allvehicle"
+                      >
+                        Trucks
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link nav-link-top"
+                        href="/Allvehicle"
+                      >
+                        Pickup
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link nav-link-top"
+                        href="/Allvehicle"
+                      >
+                        Dump Truck
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link nav-link-top"
+                        href="/Allvehicle"
+                      >
+                        Special Vehicle
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </nav>
       </div>
-      
-         <div className="w-100 d-sm-none d-block"></div>
-          <div className="col-sm-3 col-12">
-          <div className="position-relative">
-            <div className="searchBoxc">
-              <input className="searchInputc" type="text" name="" placeholder="Search" />
-              <button className="searchButtonc">
-                  <i className="bi bi-search"></i>
-              </button>
-            </div>
-            </div>
-          <div className="position-relative d-sm-block d-none">
-            <div className="call">
-              <Image width={110} height={45} src={call} alt="Call" />
-            </div>
-          </div>
-          </div>
-      </div>
 
+      <div className="w-100 d-sm-none d-block"></div>
+      <div className="col-sm-3 col-12">
+        <div className="position-relative">
+          <div className="searchBoxc">
+            <input
+              className="searchInputc"
+              type="text"
+              name=""
+              placeholder="Search"
+            />
+            <button className="searchButtonc">
+              <i className="bi bi-search"></i>
+            </button>
+          </div>
+        </div>
+        <div className="position-relative d-sm-block d-none">
+          <div className="call">
+            <Image width={110} height={45} src={call} alt="Call" />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -19,7 +19,14 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/news/Recentnews.jss"
-, "pages/Investor.jsx"  ],
+    "pages/news/Recentnews.jss",
+    "pages/Investor.jsx",
+    "pages/Mission.jsx",
+    "pages/Whoweare.jsx",
+    "pages/Values.jsx",
+    "pages/History.jsx",
+    "pages/Partners.jsx",
+    "pages/Statistics.jsx"
+  ],
   "exclude": ["node_modules"]
 }

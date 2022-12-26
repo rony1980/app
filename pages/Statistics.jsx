@@ -60,26 +60,26 @@ const Statistics = () => {
       >
         <div className="container">
           <div className="row py-5">
-            <div className="col-sm-6 offset-sm-6">
-              {document.map((doc) => {
+            {document.map((doc) => {
+              <div className="col-sm-6 offset-sm-6" key={doc.id}>
                 return (
-                  <div className="row row-cols-2 g-3 g-lg-5">
-                    {doc.content_item.map((item) => {
-                      return (
-                        <div className="col" key={item.id}>
-                          <div className="p-3 bg-white border-redius">
-                            <h1 className="brandColor fw-bold text-center">
-                              {item.item_short_desc}
-                            </h1>
-                            <h4 className="text-center">{item.item_name}</h4>
-                          </div>
+                <div className="row row-cols-2 g-3 g-lg-5">
+                  {doc.content_item.map((item) => {
+                    return (
+                      <div className="col" key={item.id}>
+                        <div className="p-3 bg-white border-redius">
+                          <h1 className="brandColor fw-bold text-center">
+                            {item.item_short_desc}
+                          </h1>
+                          <h4 className="text-center">{item.item_name}</h4>
                         </div>
-                      );
-                    })}
-                  </div>
+                      </div>
+                    );
+                  })}
+                </div>
                 );
-              })}
-            </div>
+              </div>;
+            })}
           </div>
         </div>
       </div>

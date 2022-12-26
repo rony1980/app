@@ -48,59 +48,57 @@ const Whoweare = () => {
         {moduleBanner}
       </div>
       <div className="container">
-        <h1 className="brandColor text-center my-5 fw-bold">{moduleName}</h1>
+        {moduleName}
 
-        <div className="mb-5">
-          {document.map((item) => {
-            return (
-              <>
-                {item.content_item.map((vision, i) => {
-                  return (
-                    <div key={i} className="row d-flex align-items-center">
-                      {i % 2 == 0 ? (
-                        <>
-                          <div className={"col-sm-6 p-0"}>
-                            <Image
-                              className="img-fluid"
-                              width={600}
-                              height={400}
-                              src={vision.item_image}
-                              alt="image"
-                            />
-                          </div>
-                          <div className="col-sm-6 order-sm-2 order-1 px-5 my-5">
-                            <h4 className="brandColor fw-bold text-center">
-                              {vision.item_name}
-                            </h4>
-                            {vision.item_long_desc}
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <div className="col-sm-6 order-2 p-0">
-                            <Image
-                              className="img-fluid"
-                              width={600}
-                              height={400}
-                              src={vision.item_image}
-                              alt="image"
-                            />
-                          </div>
-                          <div className="col-sm-6 order-sm-1 order-2 px-5 my-5">
-                            <h4 className="brandColor fw-bold text-center">
-                              {vision.item_name}
-                            </h4>
-                            {vision.item_long_desc}
-                          </div>
-                        </>
-                      )}
-                    </div>
-                  );
-                })}
-              </>
-            );
-          })}
-        </div>
+        {document.map((item) => {
+          return (
+            <div className="mb-5" key={item.id}>
+              {item.content_item.map((vision, i) => {
+                return (
+                  <div key={i} className="row d-flex align-items-center">
+                    {i % 2 == 0 ? (
+                      <>
+                        <div className={"col-sm-6 p-0"}>
+                          <Image
+                            className="img-fluid"
+                            width={600}
+                            height={400}
+                            src={vision.item_image}
+                            alt="image"
+                          />
+                        </div>
+                        <div className="col-sm-6 order-sm-2 order-1 px-5 my-5">
+                          <h4 className="brandColor fw-bold text-center">
+                            {vision.item_name}
+                          </h4>
+                          {vision.item_long_desc}
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="col-sm-6 order-2 p-0">
+                          <Image
+                            className="img-fluid"
+                            width={600}
+                            height={400}
+                            src={vision.item_image}
+                            alt="image"
+                          />
+                        </div>
+                        <div className="col-sm-6 order-sm-1 order-2 px-5 my-5">
+                          <h4 className="brandColor fw-bold text-center">
+                            {vision.item_name}
+                          </h4>
+                          {vision.item_long_desc}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
       </div>
       <Footer />
     </>

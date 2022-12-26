@@ -19,12 +19,12 @@ const Partners = () => {
 
   const moduleName = document.map((item) => {
     return (
-      <>
-        <h1 className="brandColor text-center my-5 fw-bold" key={item.id}>
+      <div key={item.id}>
+        <h1 className="brandColor text-center my-5 fw-bold">
           {item.module_name}
         </h1>
         <p className="text-center">{item.module_description}</p>
-      </>
+      </div>
     );
   });
 
@@ -57,61 +57,61 @@ const Partners = () => {
       <div className="container">
         <div className="row my-5">{moduleName}</div>
       </div>
-      <div className="swiper">
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={100}
-          slidesPerView={1}
-          pagination={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          navigation={true}
-          breakpoints={{
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 0,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 0,
-            },
-            1024: {
-              slidesPerView: 6,
-              spaceBetween: 50,
-            },
-            1920: {
-              slidesPerView: 6,
-              spaceBetween: 50,
-            },
-          }}
-        >
-          {document.map((doc) => {
-            return (
-              <>
-                {doc.content_item.map((ron) => {
-                  return (
-                    <SwiperSlide key={ron.id}>
-                      <div className="col my-5">
-                        <div className="d-flex justify-content-center align-items-center position-relative">
-                          <Image
-                            className="img-fluid mb-3 partnerLogo"
-                            src={ron.item_image}
-                            alt="car"
-                            width={1920}
-                            height={0}
-                          />
-                        </div>
+
+      {document.map((doc) => {
+        return (
+          <div className="swiper" key={doc.id}>
+            <Swiper
+              modules={[Navigation]}
+              spaceBetween={100}
+              slidesPerView={1}
+              pagination={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              navigation={true}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 0,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 0,
+                },
+                1024: {
+                  slidesPerView: 6,
+                  spaceBetween: 50,
+                },
+                1920: {
+                  slidesPerView: 6,
+                  spaceBetween: 50,
+                },
+              }}
+            >
+              {doc.content_item.map((ron) => {
+                return (
+                  <SwiperSlide key={ron.id}>
+                    <div className="col my-5">
+                      <div className="d-flex justify-content-center align-items-center position-relative">
+                        <Image
+                          className="img-fluid mb-3 partnerLogo"
+                          src={ron.item_image}
+                          alt="car"
+                          width={1920}
+                          height={0}
+                        />
                       </div>
-                    </SwiperSlide>
-                  );
-                })}
-              </>
-            );
-          })}
-        </Swiper>
-      </div>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
+        );
+      })}
+
       <Footer />
     </>
   );

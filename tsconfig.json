@@ -20,6 +20,6 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/news/Recentnews.jss"
-, "pages/Investor.jsx"  ],
+, "pages/Investor.jsx", "pages/Values.js", "pages/components/Homeslider.jsx", "pages/components/Client.jsx", "pages/components/Strength.jsx", "pages/components/Award.jsx", "pages/components/NewsEvent.jsx"  ],
   "exclude": ["node_modules"]
 }

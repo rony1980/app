@@ -1,5 +1,4 @@
-import React from "react";
-import bg from "../../public/backgrounds/client-bg.jpg";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -7,22 +6,20 @@ import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
 export default function Client() {
-  const client = [
-    { id: 1, image: "c1", videoLink: "https://youtube.com" },
-    { id: 2, image: "c2", videoLink: "https://youtube.com" },
-    { id: 3, image: "c3", videoLink: "https://youtube.com" },
-    { id: 4, image: "c4", videoLink: "https://youtube.com" },
-  ];
+  const [document, setDocument] = useState([]);
+  useEffect(() => {
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/4")
+      .then((res) => res.json())
+      .then((data) => setDocument(data));
+  }, []);
 
-  const background = {
-    backgroundImage: `url(${bg.src})`,
-  };
-  const playButton = {};
-  
-  return (
-    <div className="mt-5">
-      <h1 className="brandColor text-center mb-4 fw-bold">What Client Say</h1>
-      <div className="row" style={background}>
+  const moduleName = document.map((item) => {
+    return (
+
+      <div className="mt-5" key={item.id}>
+     
+      <div className="row" style={{backgroundImage: `url(${item.module_image})`,}}>
+         <h1 className="text-white text-center mt-5 fw-bold">{item.module_name}</h1>
           <div className="swiper">
             <Swiper
               modules={[Navigation]}
@@ -53,20 +50,20 @@ export default function Client() {
                 },
               }}
             >
-              {client.map((ron) => {
+              {item.content_item.map((ron) => {
                 return (
                   <SwiperSlide key={ron.id}>
                     <div className="col mt-5">
                       <div className="d-flex justify-content-center align-items-center position-relative">
                         <Image
                           className="img-fluid mb-3"
-                          src={`/clients/${ron.image}.jpg`}
+                          src={ron.item_image}
                           alt="car"
                           width={1920}
                           height={0}
                         />
                         <div className="display-1 text-white position-absolute">
-                          <Link href={ron.videoLink} style={{ color: "white" }}>
+                          <Link href={ron.item_video_link} style={{ color: "white" }}>
                             <i className="bi bi-play-circle"></i>
                           </Link>
                         </div>
@@ -79,5 +76,14 @@ export default function Client() {
           </div>
       </div>
     </div>
+    );
+  });
+
+  const playButton = {};
+  
+  return (
+    <>
+    {moduleName}
+    </>
   );
 }

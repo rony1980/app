@@ -196,6 +196,20 @@ input:focus {
   line-height: 30px;
   width: 0px;
 }
+.valueBox {
+  width: 100%;
+  border-radius: 20px;
+  background: #f68422;
+  min-height: 300px;
+}
+.valueNumberBox {
+  width: 60px;
+  height: 60px;
+  background: #666;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
 
 @media (prefers-color-scheme: dark) {
   html {

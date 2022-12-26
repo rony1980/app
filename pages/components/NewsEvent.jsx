@@ -1,24 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
-import background from "../../public/backgrounds/background.png";
+export default function NewsEvent() {
+  const [document, setDocument] = useState([]);
+  useEffect(() => {
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/17")
+      .then((res) => res.json())
+      .then((data) => setDocument(data));
+  }, []);
 
-export default function Award() {
-  const award = [
-    { id: 1, image: "a1" },
-    { id: 2, image: "a2" },
-    { id: 3, image: "a1" },
-  ];
-  
-  return (
+  const moduleName = document.map((item) => {
+    return (
       <div
-        className="row pt-5 position-relative"
-        style={{ backgroundImage: `url(${background.src})` }}
+        className="row py-5 position-relative"
+        style={{
+          backgroundImage: `url(${item.module_image})`,
+          backgroundSize: "cover",
+        }}
+        key={item.id}
       >
-        <h1 className="brandColor text-center fw-bold">Award & Recognition</h1>
+        <h1 className="brandColor text-center fw-bold">{item.module_name}</h1>
         <div className="swiper">
           <Swiper
             modules={[Navigation]}
@@ -40,23 +44,23 @@ export default function Award() {
                 spaceBetween: 0,
               },
               1024: {
-                slidesPerView: 2,
+                slidesPerView: 4,
                 spaceBetween: 50,
               },
               1920: {
-                slidesPerView: 2,
+                slidesPerView: 4,
                 spaceBetween: 50,
               },
             }}
           >
-            {award.map((ron) => {
+            {item.content_item.map((ron) => {
               return (
                 <SwiperSlide key={ron.id}>
                   <div className="col mt-5">
                     <div className="d-flex justify-content-center align-items-center position-relative">
                       <Image
                         className="img-fluid mb-3"
-                        src={`/award/${ron.image}.png`}
+                        src={ron.item_image}
                         alt="car"
                         width={1920}
                         height={0}
@@ -69,5 +73,8 @@ export default function Award() {
           </Swiper>
         </div>
       </div>
-  );
+    );
+  });
+
+  return <>{moduleName}</>;
 }

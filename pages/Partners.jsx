@@ -2,7 +2,6 @@ import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Top from "./components/Top";
-import Homeslider from "./components/Homeslider";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

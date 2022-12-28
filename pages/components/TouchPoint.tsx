@@ -27,13 +27,13 @@ export default function TouchPoint() {
           >
             <div className="px-4 text-center">
               <Image width={50} height={50} src={salesIcon} alt="icon" />
-              <p>Sales</p>
+              <p>Sales Center</p>
             </div>
-            <div className="px-4">
+            <div className="px-4 text-center">
               <Image width={50} height={50} src={serviceIcon} alt="icon" />
-              <p>Service</p>
+              <p>Service Center</p>
             </div>
-            <div className="px-4">
+            <div className="px-4 text-center">
               <Image width={50} height={50} src={leypartsIcon} alt="icon" />
               <p>Leyparts</p>
             </div>
@@ -49,8 +49,8 @@ export default function TouchPoint() {
           <div className="row py-3">
             <select className="form-select" aria-label="Default select example">
               <option defaultValue="0">Select Category</option>
-              <option value="1">Sales</option>
-              <option value="2">Service</option>
+              <option value="1">Sales Center</option>
+              <option value="2">Service Center</option>
               <option value="3">Layparts</option>
             </select>
           </div>

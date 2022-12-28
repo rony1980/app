@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
+import Link from "next/link";
 export default function NewsEvent() {
   const [document, setDocument] = useState([]);
   useEffect(() => {
@@ -56,15 +57,26 @@ export default function NewsEvent() {
             {item.content_item.map((ron) => {
               return (
                 <SwiperSlide key={ron.id}>
-                  <div className="col mt-5">
-                    <div className="d-flex justify-content-center align-items-center position-relative">
-                      <Image
-                        className="img-fluid mb-3"
-                        src={ron.item_image}
-                        alt="car"
-                        width={1920}
-                        height={0}
-                      />
+                  <div className="newsDiv">
+                    <div className="col mt-5">
+                      <div className="d-flex justify-content-center align-items-center position-relative">
+                        <Image
+                          className="img-fluid mb-3 newsImage"
+                          src={ron.item_image}
+                          alt="car"
+                          width={1920}
+                          height={0}
+                        />
+                      </div>
+                    </div>
+                    <div className="newsButtonDiv">
+                      <Link
+                        href={`news/${ron.id}`}
+                        type="button"
+                        className="btn btn-warning"
+                      >
+                        Read More
+                      </Link>
                     </div>
                   </div>
                 </SwiperSlide>

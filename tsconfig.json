@@ -33,7 +33,10 @@
     "pages/components/Homeslider.jsx",
     "pages/components/Client.jsx",
     "pages/components/Award.jsx",
-    "pages/components/NewsEvent.jsx"
+    "pages/components/NewsEvent.jsx",
+    "pages/components/Social.js",
+    "pages/_document.js",
+    "pages/SingleVehicle.jsx"
   ],
   "exclude": ["node_modules"]
 }

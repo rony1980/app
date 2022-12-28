@@ -72,7 +72,7 @@ const Footer = () => {
                   </nav>
                   <div className="position-absolute" style={Scrollspy}>
                     <Link href={"#Top"} scroll={false}>
-                      <i className="bi bi-arrow-up-square-fill fs-1 text-warning"></i>
+                      <i className="bi bi-arrow-up-square-fill fs-1 brandColor"></i>
                     </Link>
                   </div>
                 </div>
@@ -111,7 +111,7 @@ const Footer = () => {
       <div className="container-fluid" style={{ backgroundColor: "#151515" }}>
         <div className="container">
           <div className="row py-3 text-center text-white">
-            <div className="col-sm-12">
+            <div className="col-sm-12" style={{ fontSize: "14px" }}>
               <i className="bi bi-c-circle"></i> 2022 IFAD AUTOS. All Rights
               Reserved | Developed by API
             </div>

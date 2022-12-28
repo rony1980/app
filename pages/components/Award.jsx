@@ -42,11 +42,11 @@ export default function Award() {
                 spaceBetween: 0,
               },
               1024: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 50,
               },
               1920: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 50,
               },
             }}

@@ -47,13 +47,13 @@ const Social = () => {
               ></div>
             </div>
             <div className="col-sm-3 mb-sm-0 mb-4">
-              <i class="bi bi-instagram"></i>
+              <i className="bi bi-instagram"></i>
             </div>
             <div className="col-sm-3 mb-sm-0 mb-4">
-              <i class="bi bi-linkedin"></i>
+              <i className="bi bi-linkedin"></i>
             </div>
             <div className="col-sm-3 mb-sm-0 mb-4">
-              <i class="bi bi-youtube"></i>
+              <i className="bi bi-youtube"></i>
             </div>
           </div>
         </div>

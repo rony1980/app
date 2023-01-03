@@ -6,7 +6,6 @@ import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.css";
 import background from "../../public/backgrounds/background.png";
-import Link from "next/link";
 
 export default function Discover() {
   const product = {
@@ -101,7 +100,7 @@ export default function Discover() {
       },
     ],
   };
-
+  
   return (
     <div
       className="row py-5"
@@ -110,268 +109,267 @@ export default function Discover() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <h1 className="brandColor text-center fw-bold">Discover The Range</h1>
-      <div className="d-flex justify-content-center mt-3">
-        <ul
-          className="nav nav-pills mb-3 text-center"
-          id="pills-tab"
-          role="tablist"
-        >
-          <li className="nav-item" role="presentation">
-            <button
-              className="nav-link active"
-              id="pills-home-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-home"
-              role="tab"
-              aria-controls="pills-home"
-              aria-selected="true"
-            >
-              Buses
-            </button>
-          </li>
-          <li className="nav-item" role="presentation">
-            <button
-              className="nav-link"
-              id="pills-profile-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-profile"
-              type="button"
-              role="tab"
-              aria-controls="pills-profile"
-              aria-selected="false"
-            >
-              Trucks
-            </button>
-          </li>
-          <li className="nav-item" role="presentation">
-            <button
-              className="nav-link"
-              id="pills-contact-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-contact"
-              type="button"
-              role="tab"
-              aria-controls="pills-contact"
-              aria-selected="false"
-            >
-              Pickup
-            </button>
-          </li>
-        </ul>
-      </div>
-      <div className="tab-content p-0" id="pills-tabContent">
-        <div
-          className="tab-pane fade show active"
-          id="pills-home"
-          role="tabpanel"
-          aria-labelledby="pills-home-tab"
-        >
-          {/* Buses */}
-          <div className="swiper">
-            <Swiper
-              modules={[Navigation]}
-              spaceBetween={100}
-              slidesPerView={1}
-              pagination={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              navigation={true}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 0,
-                },
-                768: {
-                  slidesPerView: 1,
-                  spaceBetween: 0,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-                1920: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-              }}
-            >
-              {product.bus.map((ron) => {
-                return (
-                  <SwiperSlide key={ron.id}>
-                    <div className="col mt-2">
-                      <div className="h-100">
-                        <Image
-                          className="img-fluid mb-3"
-                          src={`/product/${ron.image}`}
-                          alt="car"
-                          width={1920}
-                          height={0}
-                        />
-                        <h5 className="text-center">{ron.name}</h5>
-                        <p className="text-center fs-6 py-4">{ron.detail}</p>
-                        <div className="d-flex justify-content-center">
-                          <Link
-                            type="button"
-                            className="btn btn-outline-warning px-4"
-                            href={"/SingleVehicle"}
-                          >
-                            Explore
-                          </Link>
+        <h1 className="brandColor text-center fw-bold">Discover The Range</h1>
+        <div className="d-flex justify-content-center mt-5">
+          <ul
+            className="nav nav-pills mb-3 text-center"
+            id="pills-tab"
+            role="tablist"
+          >
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link active"
+                id="pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target={`#${Object.keys(product)[0]}`}
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+              >
+                Buses
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link"
+                id="pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target={`#${Object.keys(product)[1]}`}
+                type="button"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+              >
+                Trucks
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link"
+                id="pills-contact-tab"
+                data-bs-toggle="pill"
+                data-bs-target={`#${Object.keys(product)[2]}`}
+                type="button"
+                role="tab"
+                aria-controls="pills-contact"
+                aria-selected="false"
+              >
+                Pickup
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div className="tab-content p-0" id="pills-tabContent">
+          <div
+            className="tab-pane fade show active"
+            id={Object.keys(product)[0]}
+            role="tabpanel"
+            aria-labelledby="pills-home-tab"
+          >
+            {/* Buses */}
+            <div className="swiper">
+              <Swiper
+                modules={[Navigation]}
+                spaceBetween={100}
+                slidesPerView={1}
+                pagination={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                navigation={true}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                  },
+                  768: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                  1920: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                }}
+              >
+                {product.bus.map((ron) => {
+                  return (
+                    <SwiperSlide key={ron.id}>
+                      <div className="col mt-5">
+                        <div className="h-100">
+                          <Image
+                            className="img-fluid mb-3"
+                            src={`/product/${ron.image}`}
+                            alt="car"
+                            width={1920}
+                            height={0}
+                          />
+                          <h5 className="text-center">{ron.name}</h5>
+                          <p className="text-center fs-6 py-4">{ron.detail}</p>
+                          <div className="d-flex justify-content-center">
+                            <a
+                              type="button"
+                              className="btn btn-outline-warning px-4"
+                            >
+                              Explore
+                            </a>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
           </div>
-        </div>
-        <div
-          className="tab-pane fade"
-          id="pills-profile"
-          role="tabpanel"
-          aria-labelledby="pills-profile-tab"
-        >
-          {/* Trucks */}
-          <div className="swiper">
-            <Swiper
-              modules={[Navigation]}
-              spaceBetween={100}
-              slidesPerView={1}
-              pagination={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              navigation={true}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 0,
-                },
-                768: {
-                  slidesPerView: 1,
-                  spaceBetween: 0,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-                1920: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-              }}
-            >
-              {product.trucks.map((ron) => {
-                return (
-                  <SwiperSlide key={ron.id}>
-                    <div className="col mt-5">
-                      <div className="h-100">
-                        <Image
-                          className="img-fluid mb-3"
-                          src={`/product/${ron.image}`}
-                          alt="car"
-                          width={1920}
-                          height={0}
-                        />
-                        <h5 className="text-center">{ron.name}</h5>
-                        <p className="text-center fs-6 py-4">{ron.detail}</p>
-                        <div className="d-flex justify-content-center">
-                          <a
-                            type="button"
-                            className="btn btn-outline-warning px-4"
-                          >
-                            Explore
-                          </a>
+          <div
+            className="tab-pane fade"
+            id={Object.keys(product)[1]}
+            role="tabpanel"
+            aria-labelledby="pills-profile-tab"
+          >
+            {/* Trucks */}
+            <div className="swiper">
+              <Swiper
+                modules={[Navigation]}
+                spaceBetween={100}
+                slidesPerView={1}
+                pagination={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                navigation={true}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                  },
+                  768: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                  1920: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                }}
+              >
+                {product.trucks.map((ron) => {
+                  return (
+                    <SwiperSlide key={ron.id}>
+                      <div className="col mt-5">
+                        <div className="h-100">
+                          <Image
+                            className="img-fluid mb-3"
+                            src={`/product/${ron.image}`}
+                            alt="car"
+                            width={1920}
+                            height={0}
+                          />
+                          <h5 className="text-center">{ron.name}</h5>
+                          <p className="text-center fs-6 py-4">{ron.detail}</p>
+                          <div className="d-flex justify-content-center">
+                            <a
+                              type="button"
+                              className="btn btn-outline-warning px-4"
+                            >
+                              Explore
+                            </a>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
           </div>
-        </div>
-        <div
-          className="tab-pane fade"
-          id="pills-contact"
-          role="tabpanel"
-          aria-labelledby="pills-contact-tab"
-        >
-          {/* Pickup */}
-          <div className="swiper">
-            <Swiper
-              modules={[Navigation]}
-              spaceBetween={100}
-              slidesPerView={1}
-              pagination={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              navigation={true}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 0,
-                },
-                768: {
-                  slidesPerView: 1,
-                  spaceBetween: 0,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-                1920: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-              }}
-            >
-              {product.pickup.map((ron) => {
-                return (
-                  <SwiperSlide key={ron.id}>
-                    <div className="col mt-5">
-                      <div className="h-100">
-                        <Image
-                          className="img-fluid mb-3"
-                          src={`/product/${ron.image}`}
-                          alt="car"
-                          width={1920}
-                          height={0}
-                        />
-                        <h5 className="text-center">{ron.name}</h5>
-                        <p className="text-center fs-6 py-4">{ron.detail}</p>
-                        <div className="d-flex justify-content-center">
-                          <a
-                            type="button"
-                            className="btn btn-outline-warning px-4"
-                          >
-                            Explore
-                          </a>
+          <div
+            className="tab-pane fade"
+            id={Object.keys(product)[2]}
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab"
+          >
+            {/* Pickup */}
+            <div className="swiper">
+              <Swiper
+                modules={[Navigation]}
+                spaceBetween={100}
+                slidesPerView={1}
+                pagination={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                navigation={true}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                  },
+                  768: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                  1920: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                }}
+              >
+                {product.pickup.map((ron) => {
+                  return (
+                    <SwiperSlide key={ron.id}>
+                      <div className="col mt-5">
+                        <div className="h-100">
+                          <Image
+                            className="img-fluid mb-3"
+                            src={`/product/${ron.image}`}
+                            alt="car"
+                            width={1920}
+                            height={0}
+                          />
+                          <h5 className="text-center">{ron.name}</h5>
+                          <p className="text-center fs-6 py-4">{ron.detail}</p>
+                          <div className="d-flex justify-content-center">
+                            <a
+                              type="button"
+                              className="btn btn-outline-warning px-4"
+                            >
+                              Explore
+                            </a>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
+          </div>
+          <div
+            className="tab-pane fade"
+            id="pills-disabled"
+            role="tabpanel"
+            aria-labelledby="pills-disabled-tab"
+          >
+            ...
           </div>
         </div>
-        <div
-          className="tab-pane fade"
-          id="pills-disabled"
-          role="tabpanel"
-          aria-labelledby="pills-disabled-tab"
-        >
-          ...
-        </div>
-      </div>
     </div>
   );
 }

@@ -121,7 +121,7 @@ export default function Discover() {
                 className="nav-link active"
                 id="pills-home-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#pills-home"
+                data-bs-target={`#${Object.keys(product)[0]}`}
                 role="tab"
                 aria-controls="pills-home"
                 aria-selected="true"
@@ -134,7 +134,7 @@ export default function Discover() {
                 className="nav-link"
                 id="pills-profile-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#pills-profile"
+                data-bs-target={`#${Object.keys(product)[1]}`}
                 type="button"
                 role="tab"
                 aria-controls="pills-profile"
@@ -148,7 +148,7 @@ export default function Discover() {
                 className="nav-link"
                 id="pills-contact-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#pills-contact"
+                data-bs-target={`#${Object.keys(product)[2]}`}
                 type="button"
                 role="tab"
                 aria-controls="pills-contact"
@@ -162,7 +162,7 @@ export default function Discover() {
         <div className="tab-content p-0" id="pills-tabContent">
           <div
             className="tab-pane fade show active"
-            id="pills-home"
+            id={Object.keys(product)[0]}
             role="tabpanel"
             aria-labelledby="pills-home-tab"
           >
@@ -229,7 +229,7 @@ export default function Discover() {
           </div>
           <div
             className="tab-pane fade"
-            id="pills-profile"
+            id={Object.keys(product)[1]}
             role="tabpanel"
             aria-labelledby="pills-profile-tab"
           >
@@ -296,7 +296,7 @@ export default function Discover() {
           </div>
           <div
             className="tab-pane fade"
-            id="pills-contact"
+            id={Object.keys(product)[2]}
             role="tabpanel"
             aria-labelledby="pills-contact-tab"
           >

@@ -34,28 +34,6 @@ const Social = () => {
               );
             })}
           </div>
-          <div className="row">
-            <div className="col-sm-3 mb-sm-0 mb-4">
-              <div
-                className="fb-like"
-                data-href="https://www.facebook.com/ifadautos"
-                data-width=""
-                data-layout="button_count"
-                data-action="like"
-                data-size="small"
-                data-share="true"
-              ></div>
-            </div>
-            <div className="col-sm-3 mb-sm-0 mb-4">
-              <i className="bi bi-instagram"></i>
-            </div>
-            <div className="col-sm-3 mb-sm-0 mb-4">
-              <i className="bi bi-linkedin"></i>
-            </div>
-            <div className="col-sm-3 mb-sm-0 mb-4">
-              <i className="bi bi-youtube"></i>
-            </div>
-          </div>
         </div>
       </div>
     );

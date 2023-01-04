@@ -26,6 +26,29 @@ const Footer = () => {
     bottom: "20px",
     right: "20px",
   };
+  const socialIcon = [
+    {
+      id: "1",
+      icon: 'facebook',
+      link: 'https://facebook.com'
+    },
+    {
+      id: "1",
+      icon: 'instagram',
+      link: 'https://instagram.com'
+    },
+    {
+      id: "1",
+      icon: 'linkedin',
+      link: 'https://linkedin.com'
+    },
+    {
+      id: "1",
+      icon: 'youtube',
+      link: 'https://youtube.com'
+    }
+  ]
+ 
   //Bootstrap js
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
@@ -72,7 +95,7 @@ const Footer = () => {
                   </nav>
                   <div className="position-absolute" style={Scrollspy}>
                     <Link href={"#Top"} scroll={false}>
-                      <i className="bi bi-arrow-up-square-fill fs-1 brandColor"></i>
+                      <i className="bi bi-arrow-up-square-fill fs-1 text-warning"></i>
                     </Link>
                   </div>
                 </div>
@@ -81,7 +104,7 @@ const Footer = () => {
                 <div className="col-sm-2">
                   <Image className="img-fluid" src={footerLogo} alt="logo" />
                 </div>
-                <div className="col-sm-9 d-flex justify-content-center">
+                <div className="col-sm-8 d-flex justify-content-center">
                   <nav className="navbar navbar-expand-lg">
                     <ul className="navbar-nav">
                       {menu.map((nav: any) => {
@@ -100,8 +123,14 @@ const Footer = () => {
                     </ul>
                   </nav>
                 </div>
-                <div className="col-sm-1">
-                  <Image className="img-fluid" src={call} alt="call" />
+                <div className="col-sm-2">
+                  <div className="d-flex flex-row justify-content-end fs-4 text-white">
+                    {socialIcon.map(item=>{
+                      return(              
+                      <Link key={item.id} style={{color:"#F68422"}} href={item.link}><i className={`ms-2 bi bi-${item.icon}`}></i></Link>                        
+                      )
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
@@ -111,7 +140,7 @@ const Footer = () => {
       <div className="container-fluid" style={{ backgroundColor: "#151515" }}>
         <div className="container">
           <div className="row py-3 text-center text-white">
-            <div className="col-sm-12" style={{ fontSize: "14px" }}>
+            <div className="col-sm-12">
               <i className="bi bi-c-circle"></i> 2022 IFAD AUTOS. All Rights
               Reserved | Developed by API
             </div>

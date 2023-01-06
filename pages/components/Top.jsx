@@ -1,10 +1,16 @@
 import { PHASE_PRODUCTION_BUILD } from "next/dist/shared/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../public/logo/logo.png";
 import call from "../../public/social/call.png";
 const Top = () => {
+  const [cat, setCat] = useState([]);
+  useEffect(() => {
+    fetch("http://autosapi.ifadgroup.com:8001/categories")
+      .then((res) => res.json())
+      .then((data) => setCat(data));
+  }, []);
   const menu = {
     About: [
       {
@@ -91,7 +97,7 @@ const Top = () => {
                         About
                       </a>
                       <ul className="dropdown-menu">
-                        {menu.About.map((item: any) => {
+                        {menu.About.map((item) => {
                           return (
                             <li key={item.id}>
                               <Link className="dropdown-item" href={item.slug}>
@@ -125,46 +131,24 @@ const Top = () => {
                 </div>
                 <div className="col-sm-12">
                   <ul className="navbar-nav d-flex justify-content-center fs-4">
-                    <li className="nav-item">
-                      <Link
-                        className="nav-link nav-link-top"
-                        href="/Allvehicle"
-                      >
-                        Buses
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link
-                        className="nav-link nav-link-top"
-                        href="/Allvehicle"
-                      >
-                        Trucks
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link
-                        className="nav-link nav-link-top"
-                        href="/Allvehicle"
-                      >
-                        Pickup
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link
-                        className="nav-link nav-link-top"
-                        href="/Allvehicle"
-                      >
-                        Dump Truck
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link
-                        className="nav-link nav-link-top"
-                        href="/Allvehicle"
-                      >
-                        Special Vehicle
-                      </Link>
-                    </li>
+                    {cat.map((cats) => {
+                      return (
+                        <>
+                          {cats.product_category_list.map((item) => {
+                            return (
+                              <li className="nav-item">
+                                <Link
+                                  className="nav-link nav-link-top"
+                                  href="/Allvehicle"
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>

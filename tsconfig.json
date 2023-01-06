@@ -36,7 +36,8 @@
     "pages/components/NewsEvent.jsx",
     "pages/components/Social.js",
     "pages/_document.js",
-    "pages/SingleVehicle.jsx"
+    "pages/SingleVehicle.jsx",
+    "pages/components/Top.jsx"
   ],
   "exclude": ["node_modules"]
 }

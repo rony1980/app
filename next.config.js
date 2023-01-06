@@ -6,6 +6,6 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ["http://autoscms.ifadgroup.com"],
+    domains: ["autoscms.ifadgroup.com"],
   },
 };

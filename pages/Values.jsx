@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Head from "next/head";
-import Top from "./components/Top";
 import Footer from "./components/Footer";
-import bg from "../public/values/values.webp";
 const Values = () => {
   const [document, setDocument] = useState([]);
   useEffect(() => {
@@ -42,12 +39,6 @@ const Values = () => {
   return (
     <>
       <div className="container-fluid">
-        <Head>
-          <title>{moduleName}</title>
-          <meta name="description" content="All" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Top />
         {moduleBanner}
       </div>
       <div
@@ -78,7 +69,6 @@ const Values = () => {
           );
         })}
       </div>
-      <Footer />
     </>
   );
 };

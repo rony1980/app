@@ -40,7 +40,6 @@ const Management = () => {
     );
   });
   const avatar = {
-    borderRadius: "50%",
     overflow: "hidden",
     width: "100px",
     height: "100px",
@@ -64,9 +63,11 @@ const Management = () => {
               {doc.content_item.map((item, i) => {
                 return (
                   <div className="col" key={i}>
-                    <div className="card mb-3 border p-4">
+                    <div className="card mb-3 border p-4 h-100">
                       <div className="row g-0">
-                        <div className="col-md-4">
+                        <div className="col-md-12">
+                          <div className="row">
+                            <div className="col-3">
                           <div className="position-relative" style={avatar}>
                             <Image
                               src={item.item_image}
@@ -75,15 +76,17 @@ const Management = () => {
                               layout="fill"
                             />
                           </div>
-                        </div>
-                        <div className="col-md-8">
-                          <div className="card-body">
-                            <h3 className="card-title">{item.item_name}</h3>
+                          </div>
+                          <div className="col-9">
+                          <h3 className="card-title">{item.item_name}</h3>
                             <p className="card-text">
                               <small className="text-muted">
                                 {item.item_short_desc}
                               </small>
                             </p>
+                            </div>
+                        </div>
+                          <div className="card-body"> 
                             <p className="card-text">{item.item_long_desc}</p>
                           </div>
                         </div>

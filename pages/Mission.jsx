@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 const Mission = () => {
   const [document, setDocument] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/content-module/7")
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/23")
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);

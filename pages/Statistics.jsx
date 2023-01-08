@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Head from "next/head";
-import Top from "./components/Top";
-import Footer from "./components/Footer";
 import bg2 from "../public/values/statistics.webp";
 const Statistics = () => {
   const [document, setDocument] = useState([]);
@@ -42,12 +39,6 @@ const Statistics = () => {
   return (
     <>
       <div className="container-fluid">
-        <Head>
-          <title>{moduleName}</title>
-          <meta name="description" content="All" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Top />
         {moduleBanner}
       </div>
       <div
@@ -83,7 +74,6 @@ const Statistics = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

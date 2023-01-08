@@ -1,10 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import footerLogo from "../../public/logo/footerLogo.png";
-import call from "../../public/social/call.png";
 
 const Footer = () => {
+  const [social, setSocial] = useState([]);
+  useEffect(() => {
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/16")
+      .then((res) => res.json())
+      .then((data) => setSocial(data));
+  }, []);
+
   const footerNav = [
     { id: 1, name: "HOME", link: "/" },
     { id: 2, name: "ABOUT US", link: "/Mission" },
@@ -76,7 +82,7 @@ const Footer = () => {
                       </button>
                       <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                          {footerNav.map((nav: any) => {
+                          {footerNav.map((nav) => {
                             return (
                               <li key={nav.id} className="nav-item">
                                 <Link
@@ -107,7 +113,7 @@ const Footer = () => {
                 <div className="col-sm-8 d-flex justify-content-center">
                   <nav className="navbar navbar-expand-lg">
                     <ul className="navbar-nav">
-                      {menu.map((nav: any) => {
+                      {menu.map((nav) => {
                         return (
                           <li key={nav.id} className="nav-item">
                             <Link
@@ -125,11 +131,18 @@ const Footer = () => {
                 </div>
                 <div className="col-sm-2">
                   <div className="d-flex flex-row justify-content-end fs-4 text-white">
-                    {socialIcon.map(item=>{
+                    {social.map(ron=>{
+                      return(
+                        <>
+                        {ron.content_item.map(item=>{
                       return(              
-                      <Link key={item.id} style={{color:"#F68422"}} href={item.link}><i className={`ms-2 bi bi-${item.icon}`}></i></Link>                        
+                      <Link key={item.id} style={{color:"#F68422"}} href={item.item_link}><i className={`ms-2 bi bi-${item.item_name}`}></i></Link>                        
                       )
                     })}
+                        </>
+                      )
+                    })}
+                    
                   </div>
                 </div>
               </div>

@@ -60,7 +60,7 @@ const document = docs.map((doc)=>{
     <>
       <div className="container-fluid">
         <Head>
-          <title>Values</title>
+          <title>Investor Information</title>
           <meta name="description" content="All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

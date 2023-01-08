@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 const Partners = () => {
   const [document, setDocument] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/content-module/12")
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/26")
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);

@@ -7,7 +7,7 @@ import Image from "next/image";
 const Management = () => {
   const [document, setDocument] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/content-module/13")
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/27")
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);

@@ -86,7 +86,7 @@ const Management = () => {
                             </p>
                             </div>
                         </div>
-                          <div className="card-body"> 
+                          <div className="card-body px-0"> 
                             <p className="card-text">{item.item_long_desc}</p>
                           </div>
                         </div>

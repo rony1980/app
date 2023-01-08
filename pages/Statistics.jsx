@@ -17,29 +17,11 @@ const Statistics = () => {
     );
   });
 
-  const moduleBanner = document.map((item) => {
-    return (
-      <div className="row" key={item.id}>
-        <div
-          style={{
-            backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${item.module_image})`,
-            width: "100%",
-            height: "400px",
-            backgroundSize: "cover",
-          }}
-          className="coverPhoto d-flex justify-content-center align-items-center position-relative"
-        >
-          <h1 className="fw-bold position-relative text-white">
-            {item.module_name}
-          </h1>
-        </div>
-      </div>
-    );
-  });
+
   return (
     <>
       <div className="container-fluid">
-        {moduleBanner}
+        {moduleName}
       </div>
       <div
         className="container-fluid"

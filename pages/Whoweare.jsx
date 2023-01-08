@@ -4,6 +4,10 @@ import "bootstrap/dist/css/bootstrap.css";
 import Top from "./components/Top";
 import Image from "next/image";
 import Footer from "./components/Footer";
+import Mission from "./Mission";
+import Values from "./Values";
+import History from "./History";
+import Statistics from "./Statistics";
 const Whoweare = () => {
   const [document, setDocument] = useState([]);
   useEffect(() => {
@@ -100,6 +104,10 @@ const Whoweare = () => {
           );
         })}
       </div>
+      <Mission />
+      <Values />
+      <History />
+      <Statistics />
       <Footer />
     </>
   );

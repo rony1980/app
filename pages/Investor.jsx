@@ -21,18 +21,36 @@ const documentButton = docs.map((item,index)=>{
 })
 
 const document = docs.map((doc)=>{
+  
   return(
     <>
-    {doc.all_documents.map(item=>{
+    <div className="tab-pane fade" id={`tags-basic_${doc.id}`} role="tabpanel" aria-labelledby={doc.category_name} tabindex="0">
+      <h4>{doc.category_name}</h4>
+      <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Download</th>
+    </tr>
+  </thead>
+  <tbody>
+    {doc.all_documents.map((item,index)=>{
       return(
         <>
-         <div className="tab-pane fade" id={`tags-basic_${doc.id}`} role="tabpanel" aria-labelledby={item.category_name} tabindex="0">
-          <h4>{doc.category_name}</h4>
-          {item.document_file=!null ? <Link href={item.document_file}>Download</Link> : <></>}
-          </div>
+        
+    <tr>
+      <th scope="row">{index}</th>
+      <td><h6>{item.document_name}</h6></td>
+      <td>{item.document_file=!null ? <Link href={item.document_file}><i className="bi bi-cloud-download"></i></Link> : <></>}</td>
+      <td>{item.document_desc}</td>
+    </tr>
         </>
       )
     })}
+      </tbody>
+</table>
+    </div>
     </>
   )
 })

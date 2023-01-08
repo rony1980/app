@@ -1,10 +1,6 @@
-import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Top from "./components/Top";
-import Homeslider from "./components/Homeslider";
 import Image from "next/image";
-import Footer from "./components/Footer";
 const History = () => {
   const [document, setDocument] = useState([]);
   useEffect(() => {
@@ -47,15 +43,6 @@ const History = () => {
   const circle = {};
   return (
     <>
-      <div className="container-fluid">
-        <Head>
-          <title>{moduleName}</title>
-          <meta name="description" content="All" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Top />
-        {moduleBanner}
-      </div>
       <div className="container">
         {moduleName}
 
@@ -198,7 +185,6 @@ const History = () => {
           );
         })}
       </div>
-      <Footer />
     </>
   );
 };

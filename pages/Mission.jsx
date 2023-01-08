@@ -1,9 +1,6 @@
-import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Top from "./components/Top";
 import Image from "next/image";
-import Footer from "./components/Footer";
 const Mission = () => {
   const [document, setDocument] = useState([]);
   useEffect(() => {
@@ -38,16 +35,7 @@ const Mission = () => {
 
   return (
     <>
-      <div className="container-fluid">
-        <Head>
-          <title>{moduleName}</title>
-          <meta name="description" content="All" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Top />
-        {moduleBanner}
-      </div>
-      <div className="container">
+      <div className="container mt-5">
         {moduleName}
 
         {document.map((item) => {
@@ -100,7 +88,6 @@ const Mission = () => {
           );
         })}
       </div>
-      <Footer />
     </>
   );
 };

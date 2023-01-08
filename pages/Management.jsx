@@ -67,7 +67,7 @@ const Management = () => {
                       <div className="row g-0">
                         <div className="col-md-12">
                           <div className="row">
-                            <div className="col-3">
+                            <div className="col-sm-3 col-4">
                           <div className="position-relative" style={avatar}>
                             <Image
                               src={item.item_image}
@@ -77,7 +77,7 @@ const Management = () => {
                             />
                           </div>
                           </div>
-                          <div className="col-9">
+                          <div className="col-sm-9 col-8">
                           <h3 className="card-title">{item.item_name}</h3>
                             <p className="card-text">
                               <small className="text-muted">

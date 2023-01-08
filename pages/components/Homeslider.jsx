@@ -8,7 +8,7 @@ import Image from "next/image";
 const Homeslider = () => {
   const [document, setDocument] = useState([]);
   useEffect(() => {
-    fetch("http://autosapi.ifadgroup.com:8001/content-module/2")
+    fetch("http://autosapi.ifadgroup.com:8001/content-module/14")
       .then((res) => res.json())
       .then((data) => setDocument(data));
   }, []);

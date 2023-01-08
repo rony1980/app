@@ -70,6 +70,7 @@ export default function NewsEvent() {
                       </div>
                     </div>
                     <div className="newsButtonDiv">
+                    <h4>{ron.item_name}</h4>
                       <Link
                         href={`news/${ron.id}`}
                         type="button"

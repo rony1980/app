@@ -19,25 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/news/Recentnews.jss",
-    "pages/Investor.jsx",
-    "pages/Mission.jsx",
-    "pages/Whoweare.jsx",
-    "pages/Values.jsx",
-    "pages/History.jsx",
-    "pages/Partners.jsx",
-    "pages/Statistics.jsx",
-    "pages/Allvehicle.jsx",
-    "pages/Desclaimer.jsx",
-    "pages/components/Strength.jsx",
-    "pages/components/Homeslider.jsx",
-    "pages/components/Client.jsx",
-    "pages/components/Award.jsx",
-    "pages/components/NewsEvent.jsx",
-    "pages/components/Social.js",
-    "pages/_document.js",
-    "pages/SingleVehicle.jsx",
-    "pages/components/Top.jsx"
-  ],
+    "pages/news/Recentnews.jss"
+, "pages/Investor.jsx", "pages/Values.jsx", "pages/components/Homeslider.jsx", "pages/components/Client.jsx", "pages/components/Strength.jsx", "pages/components/Award.jsx", "pages/components/NewsEvent.jsx", "pages/index.jsx", "pages/Management.jsx", "pages/Whoweare.jsx", "pages/Mission.jsx", "pages/Statistics.jsx", "pages/Partners.jsx", "pages/components/Social.jsx", "pages/History.jsx", "pages/components/Top.jsx", "pages/components/Footer.jsx"  ],
   "exclude": ["node_modules"]
 }

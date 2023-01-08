@@ -19,29 +19,9 @@ const Top = () => {
         slug: "/Whoweare",
       },
       {
-        id: "2",
-        name: "Mission & Vision",
-        slug: "/Mission",
-      },
-      {
-        id: "3",
-        name: "Values",
-        slug: "/Values",
-      },
-      {
-        id: "4",
-        name: "Our Story",
-        slug: "/History",
-      },
-      {
-        id: "5",
-        name: "Statistics",
-        slug: "/Statistics",
-      },
-      {
         id: "6",
         name: "Partners",
-        slug: "Partners",
+        slug: "/Partners",
       },
       {
         id: "7",

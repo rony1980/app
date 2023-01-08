@@ -23,7 +23,6 @@ const index = () => {
         <NewsEvent /> 
         <Award />
         <TouchPoint />
-        <Social />
       </div>
       <Footer />
     </>

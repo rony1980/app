@@ -40,7 +40,7 @@ const document = docs.map((doc)=>{
         <>
         
     <tr>
-      <th scope="row">{index}</th>
+      <th scope="row">{index+1}</th>
       <td><h6>{item.document_name}</h6></td>
       <td>{item.document_file=!null ? <Link href={item.document_file}><i className="bi bi-cloud-download"></i></Link> : <></>}</td>
       <td>{item.document_desc}</td>

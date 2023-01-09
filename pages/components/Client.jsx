@@ -68,7 +68,6 @@ export default function Client() {
                             <i className="bi bi-play-circle"></i>
                           </Link>
                         </div> */}
-                        hello
                         <ReactPlayer url={ron.item_video_link} />
                       </div>
                     </div>

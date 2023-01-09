@@ -132,8 +132,9 @@ const Whoweare = () => {
       <History />
       <Statistics />
       {/* Partners */}
-      {partnerName}
-      <div className="col-sm-6 offset-sm-3">
+      
+      <div className="col-sm-6 offset-sm-3" id="Partners">
+        {partnerName}
       {partners.map((doc) => {
         return (
           <div className="swiper" key={doc.id}>

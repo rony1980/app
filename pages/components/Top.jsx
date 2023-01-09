@@ -1,6 +1,7 @@
 import { PHASE_PRODUCTION_BUILD } from "next/dist/shared/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Logo from "../../public/logo/logo.png";
 import call from "../../public/social/call.png";
@@ -11,6 +12,11 @@ const Top = () => {
       .then((res) => res.json())
       .then((data) => setCat(data));
   }, []);
+   const router = useRouter()
+   const Partners = (e) => {
+        e.preventDefault()
+        router.push("/whoweare#partners");
+    };
   const menu = {
     About: [
       {
@@ -21,7 +27,7 @@ const Top = () => {
       {
         id: "6",
         name: "Partners",
-        slug: "/Partners",
+        slug: "/Whoweare#Partners",
       },
       {
         id: "7",
@@ -66,6 +72,14 @@ const Top = () => {
               <div className="row">
                 <div className="col-sm-12">
                   <ul className="navbar-nav d-flex justify-content-center">
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link nav-link-top"
+                        href="/"
+                      >
+                        Home
+                      </Link>
+                    </li>
                     <li className="nav-item dropdown">
                       <a
                         className="nav-link dropdown-toggle"
@@ -80,7 +94,7 @@ const Top = () => {
                         {menu.About.map((item) => {
                           return (
                             <li key={item.id}>
-                              <Link className="dropdown-item" href={item.slug}>
+                              <Link className="dropdown-item" href={item.slug} scroll={false}>
                                 {item.name}
                               </Link>
                             </li>

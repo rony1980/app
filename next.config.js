@@ -6,6 +6,14 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ["autoscms.ifadgroup.com"],
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "autoscms.ifadgroup.com",
+        port: "8081",
+        pathname: "/storage/content-item/**",
+        //   pathname: '/data/products/**',
+      },
+    ],
   },
 };

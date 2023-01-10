@@ -12,22 +12,17 @@ const Top = () => {
       .then((res) => res.json())
       .then((data) => setCat(data));
   }, []);
-   const router = useRouter()
-   const Partners = (e) => {
-        e.preventDefault()
-        router.push("/whoweare#partners");
-    };
+  const router = useRouter();
+  const Partners = (e) => {
+    e.preventDefault();
+    router.push("/whoweare#partners");
+  };
   const menu = {
     About: [
       {
         id: "1",
         name: "Who we are",
         slug: "/Whoweare",
-      },
-      {
-        id: "6",
-        name: "Partners",
-        slug: "/Whoweare#Partners",
       },
       {
         id: "7",
@@ -73,10 +68,7 @@ const Top = () => {
                 <div className="col-sm-12">
                   <ul className="navbar-nav d-flex justify-content-center">
                     <li className="nav-item">
-                      <Link
-                        className="nav-link nav-link-top"
-                        href="/"
-                      >
+                      <Link className="nav-link nav-link-top" href="/">
                         Home
                       </Link>
                     </li>
@@ -94,7 +86,11 @@ const Top = () => {
                         {menu.About.map((item) => {
                           return (
                             <li key={item.id}>
-                              <Link className="dropdown-item" href={item.slug} scroll={false}>
+                              <Link
+                                className="dropdown-item"
+                                href={item.slug}
+                                scroll={false}
+                              >
                                 {item.name}
                               </Link>
                             </li>

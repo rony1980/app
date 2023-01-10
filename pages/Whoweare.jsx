@@ -28,7 +28,7 @@ const Whoweare = () => {
   }, []);
 
   const moduleName = document.map((item) => {
-    return <title>{item.module_name}</title>;
+    return <title key={item.id}>{item.module_name}</title>;
   });
 
   const moduleBanner = document.map((item) => {
@@ -86,6 +86,7 @@ const Whoweare = () => {
                             height={450}
                             src={vision.item_image}
                             alt="image"
+                            priority={true}
                           />
                         </div>
                         <div className="col-sm-8 order-sm-2 order-1 px-5 my-5">

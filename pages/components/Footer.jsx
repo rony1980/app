@@ -132,7 +132,7 @@ const Footer = () => {
                   <div className="d-flex flex-row justify-content-end fs-4 text-white">
                     {social.map((ron) => {
                       return (
-                        <>
+                        <div key={ron.id}>
                           {ron.content_item.map((item) => {
                             return (
                               <Link
@@ -146,7 +146,7 @@ const Footer = () => {
                               </Link>
                             );
                           })}
-                        </>
+                        </div>
                       );
                     })}
                   </div>

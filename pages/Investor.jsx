@@ -14,77 +14,72 @@ const Investor = () => {
   }, []);
   const documentButton = docs.map((item, index) => {
     return (
-      <>
-        <button
-          className={`nav-link text-start ${index == 0 ? "active" : ""}`}
-          id={item.id}
-          data-bs-toggle="pill"
-          data-bs-target={`#tags-basic_${item.id}`}
-          type="button"
-          role="tab"
-          aria-controls="v-pills-home"
-          aria-selected="true"
-          key={index}
-        >
-          {item.category_name} <i className="bi bi-arrow-right-short"></i>
-        </button>
-      </>
+      <button
+        className={`nav-link text-start ${index == 0 ? "active" : ""}`}
+        id={item.id}
+        data-bs-toggle="pill"
+        data-bs-target={`#tags-basic_${item.id}`}
+        type="button"
+        role="tab"
+        aria-controls="v-pills-home"
+        aria-selected="true"
+        key={index}
+      >
+        {item.category_name} <i className="bi bi-arrow-right-short"></i>
+      </button>
     );
   });
 
   const document = docs.map((doc, index) => {
     return (
-      <>
-        <div
-          className={`tab-pane fade ${index == 0 ? "show active" : ""}`}
-          id={`tags-basic_${doc.id}`}
-          role="tabpanel"
-          aria-labelledby={doc.category_name}
-          tabindex="0"
-        >
-          <h4>{doc.category_name}</h4>
-          <div class="table-responsive">
-            <table
-              class="table table-striped table-responsive"
-              style={{ width: "100%" }}
-            >
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Title</th>
-                  <th scope="col">Download</th>
-                </tr>
-              </thead>
-              <tbody>
-                {doc.all_documents.map((item, index) => {
-                  return (
-                    <>
-                      <tr>
-                        <th scope="row">{index + 1}</th>
-                        <td>
-                          <h6>{item.document_name}</h6>
-                        </td>
-                        <td>
-                          {
-                            (item.document_file = !null ? (
-                              <Link href={item.document_file}>
-                                <i className="bi bi-cloud-download"></i>
-                              </Link>
-                            ) : (
-                              <></>
-                            ))
-                          }
-                        </td>
-                        <td>{item.document_desc}</td>
-                      </tr>
-                    </>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+      <div
+        className={`tab-pane fade ${index == 0 ? "show active" : ""}`}
+        id={`tags-basic_${doc.id}`}
+        role="tabpanel"
+        aria-labelledby={doc.category_name}
+        tabIndex="0"
+        key={index}
+      >
+        <h4>{doc.category_name}</h4>
+        <div className="table-responsive">
+          <table
+            className="table table-striped table-responsive"
+            style={{ width: "100%" }}
+          >
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Download</th>
+              </tr>
+            </thead>
+            <tbody>
+              {doc.all_documents.map((item, index) => {
+                return (
+                  <tr key={index}>
+                    <th scope="row">{index + 1}</th>
+                    <td>
+                      <h6>{item.document_name}</h6>
+                    </td>
+                    <td>
+                      {
+                        (item.document_file = !null ? (
+                          <Link href={item.document_file}>
+                            <i className="bi bi-cloud-download"></i>
+                          </Link>
+                        ) : (
+                          <></>
+                        ))
+                      }
+                    </td>
+                    <td>{item.document_desc}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
-      </>
+      </div>
     );
   });
 

@@ -1,7 +1,6 @@
 import { PHASE_PRODUCTION_BUILD } from "next/dist/shared/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Logo from "../../public/logo/logo.png";
 import call from "../../public/social/call.png";
@@ -12,11 +11,6 @@ const Top = () => {
       .then((res) => res.json())
       .then((data) => setCat(data));
   }, []);
-  const router = useRouter();
-  const Partners = (e) => {
-    e.preventDefault();
-    router.push("/whoweare#partners");
-  };
   const menu = {
     About: [
       {
@@ -40,7 +34,7 @@ const Top = () => {
     <div id="Top" className="row align-items-center pb-sm-0 pb-5">
       <div className="col-sm-3 col">
         <Link href="/">
-          <Image className="img-fluid" src={Logo} alt="Logo" />
+          <Image className="img-fluid" src={Logo} alt="Logo" priority={true} />
         </Link>
         <div className="position-relative d-sm-none d-block">
           <div className="call">
@@ -120,26 +114,27 @@ const Top = () => {
                   </ul>
                 </div>
                 <div className="col-sm-12">
-                  <ul className="navbar-nav d-flex justify-content-center fs-4">
-                    {cat.map((cats) => {
-                      return (
-                        <>
-                          {cats.product_category_list.map((item) => {
-                            return (
-                              <li className="nav-item" key={item.id}>
-                                <Link
-                                  className="nav-link nav-link-top"
-                                  href="/Allvehicle"
-                                >
-                                  {item.name}
-                                </Link>
-                              </li>
-                            );
-                          })}
-                        </>
-                      );
-                    })}
-                  </ul>
+                  {cat.map((cats, index) => {
+                    return (
+                      <ul
+                        key={index}
+                        className="navbar-nav d-flex justify-content-center fs-4"
+                      >
+                        {cats.product_category_list.map((item) => {
+                          return (
+                            <li className="nav-item" key={item.id}>
+                              <Link
+                                className="nav-link nav-link-top"
+                                href="/Allvehicle"
+                              >
+                                {item.name}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    );
+                  })}
                 </div>
               </div>
             </div>

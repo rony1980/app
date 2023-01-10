@@ -13,7 +13,7 @@ const Management = () => {
   }, []);
 
   const moduleName = document.map((item) => {
-    return <title>{item.module_name}</title>;
+    return <title key={item.id}>{item.module_name}</title>;
   });
 
   const moduleBanner = document.map((item) => {
@@ -98,12 +98,12 @@ const Management = () => {
                             </div>
                           </div>
                           <div className="card-body px-0">
-                            <p
+                            <div
                               className="card-text"
                               style={{ textAlign: "justify" }}
                             >
                               <ReadMore>{item.item_long_desc}</ReadMore>
-                            </p>
+                            </div>
                           </div>
                         </div>
                       </div>

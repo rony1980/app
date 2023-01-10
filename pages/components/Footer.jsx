@@ -13,10 +13,9 @@ const Footer = () => {
 
   const footerNav = [
     { id: 1, name: "HOME", link: "/" },
-    { id: 2, name: "ABOUT US", link: "/Mission" },
+    { id: 2, name: "ABOUT US", link: "/Whoweare" },
     { id: 3, name: "PRODUCT", link: "/Allvehicle" },
-    { id: 4, name: "TOUCHPOINT", link: "/Touchpoint" },
-    { id: 5, name: "TESTMONIAL", link: "/Testimonials" },
+    { id: 4, name: "TOUCHPOINT", link: "/#Touchpoint" },
     { id: 6, name: "INVESTOR INFORMATION", link: "/Investor" },
     { id: 7, name: "NEWS & EVENTS", link: "/news/1" },
     { id: 8, name: "CAREERS", link: "https://ifadgroup.com/career" },
@@ -35,26 +34,26 @@ const Footer = () => {
   const socialIcon = [
     {
       id: "1",
-      icon: 'facebook',
-      link: 'https://facebook.com'
+      icon: "facebook",
+      link: "https://facebook.com",
     },
     {
       id: "1",
-      icon: 'instagram',
-      link: 'https://instagram.com'
+      icon: "instagram",
+      link: "https://instagram.com",
     },
     {
       id: "1",
-      icon: 'linkedin',
-      link: 'https://linkedin.com'
+      icon: "linkedin",
+      link: "https://linkedin.com",
     },
     {
       id: "1",
-      icon: 'youtube',
-      link: 'https://youtube.com'
-    }
-  ]
- 
+      icon: "youtube",
+      link: "https://youtube.com",
+    },
+  ];
+
   //Bootstrap js
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
@@ -131,18 +130,25 @@ const Footer = () => {
                 </div>
                 <div className="col-sm-2">
                   <div className="d-flex flex-row justify-content-end fs-4 text-white">
-                    {social.map(ron=>{
-                      return(
+                    {social.map((ron) => {
+                      return (
                         <>
-                        {ron.content_item.map(item=>{
-                      return(              
-                      <Link key={item.id} style={{color:"#F68422"}} href={item.item_link}><i className={`ms-2 bi bi-${item.item_name}`}></i></Link>                        
-                      )
-                    })}
+                          {ron.content_item.map((item) => {
+                            return (
+                              <Link
+                                key={item.id}
+                                style={{ color: "#F68422" }}
+                                href={item.item_link}
+                              >
+                                <i
+                                  className={`ms-2 bi bi-${item.item_name}`}
+                                ></i>
+                              </Link>
+                            );
+                          })}
                         </>
-                      )
+                      );
                     })}
-                    
                   </div>
                 </div>
               </div>

@@ -4,23 +4,28 @@ import Client from "./components/Client";
 import Discover from "./components/Discover";
 import Homeslider from "./components/Homeslider";
 import NewsEvent from "./components/NewsEvent";
-import Social from "./components/Social";
 import Strength from "./components/Strength";
 import Footer from "./components/Footer";
 import Top from "./components/Top";
 import React from "react";
 import TouchPoint from "./components/TouchPoint";
+import Head from "next/head";
 
 const index = () => {
   return (
     <>
+      <Head>
+        <title>Ifad Autos</title>
+        <meta name="description" content="All" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="container-fluid">
         <Top />
         <Homeslider />
         <Discover />
         <Strength />
         <Client />
-        <NewsEvent /> 
+        <NewsEvent />
         <Award />
         <TouchPoint />
       </div>

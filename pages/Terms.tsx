@@ -9,7 +9,7 @@ const Terms = () => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>Values</title>
+          <title>Terms of use</title>
           <meta name="description" content="All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

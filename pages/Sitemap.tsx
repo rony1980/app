@@ -9,7 +9,7 @@ const Sitemap = () => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>Values</title>
+          <title>Site map</title>
           <meta name="description" content="All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

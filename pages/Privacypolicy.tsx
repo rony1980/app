@@ -9,7 +9,7 @@ const Privacypolicy = () => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>Values</title>
+          <title>Privacy policy</title>
           <meta name="description" content="All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

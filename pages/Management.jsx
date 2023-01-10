@@ -13,11 +13,7 @@ const Management = () => {
   }, []);
 
   const moduleName = document.map((item) => {
-    return (
-      <h1 className="brandColor text-center my-5 fw-bold" key={item.id}>
-        {item.module_name}
-      </h1>
-    );
+    return <title>{item.module_name}</title>;
   });
 
   const moduleBanner = document.map((item) => {
@@ -64,7 +60,7 @@ const Management = () => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>{moduleName}</title>
+          {moduleName}
           <meta name="description" content="All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

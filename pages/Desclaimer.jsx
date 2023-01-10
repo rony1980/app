@@ -9,7 +9,7 @@ const Desclaimer = () => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>Values</title>
+          <title>Disclaimer</title>
           <meta name="description" content="All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

@@ -28,14 +28,10 @@ const Whoweare = () => {
   }, []);
 
   const moduleName = document.map((item) => {
-    return (
-      <h1 className="brandColor text-center my-5 fw-bold" key={item.id}>
-        {item.module_name}
-      </h1>
-    );
+    return <title>{item.module_name}</title>;
   });
 
-    const moduleBanner = document.map((item) => {
+  const moduleBanner = document.map((item) => {
     return (
       <div className="row" key={item.id}>
         <div
@@ -57,10 +53,8 @@ const Whoweare = () => {
 
   const partnerName = partners.map((item) => {
     return (
-      <div className="row my-5" key={item.id}>       
-          <h1 className="fw-bold text-center brandColor">
-            {item.module_name}
-          </h1>
+      <div className="row my-5" key={item.id}>
+        <h1 className="fw-bold text-center brandColor">{item.module_name}</h1>
       </div>
     );
   });
@@ -69,7 +63,7 @@ const Whoweare = () => {
     <>
       <div className="container-fluid">
         <Head>
-          <title>{moduleName}</title>
+          {moduleName}
           <meta name="description" content="All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -132,62 +126,62 @@ const Whoweare = () => {
       <History />
       <Statistics />
       {/* Partners */}
-      
+
       <div className="col-sm-6 offset-sm-3" id="Partners">
         {partnerName}
-      {partners.map((doc) => {
-        return (
-          <div className="swiper" key={doc.id}>
-            <Swiper
-              modules={[Navigation]}
-              spaceBetween={100}
-              slidesPerView={1}
-              pagination={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              navigation={true}
-              breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 0,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 0,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-                1920: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-              }}
-            >
-              {doc.content_item.map((ron) => {
-                return (
-                  <SwiperSlide key={ron.id}>
-                    <div className="col my-5">
-                      <div className="d-flex justify-content-center align-items-center position-relative">
-                        <Image
-                          className="img-fluid mb-3 partnerLogo"
-                          src={ron.item_image}
-                          alt="car"
-                          width={300}
-                          height={150}
-                        />
+        {partners.map((doc) => {
+          return (
+            <div className="swiper" key={doc.id}>
+              <Swiper
+                modules={[Navigation]}
+                spaceBetween={100}
+                slidesPerView={1}
+                pagination={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                navigation={true}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 0,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 0,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                  1920: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                }}
+              >
+                {doc.content_item.map((ron) => {
+                  return (
+                    <SwiperSlide key={ron.id}>
+                      <div className="col my-5">
+                        <div className="d-flex justify-content-center align-items-center position-relative">
+                          <Image
+                            className="img-fluid mb-3 partnerLogo"
+                            src={ron.item_image}
+                            alt="car"
+                            width={300}
+                            height={150}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
-        );
-      })}
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
+          );
+        })}
       </div>
       <Footer />
     </>

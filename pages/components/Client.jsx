@@ -57,7 +57,7 @@ export default function Client() {
                 return (
                   <SwiperSlide key={ron.id}>
                     <div className="col mt-5">
-                      <div className="d-flex justify-content-center align-items-center position-relative">
+                      <div className="d-flex justify-content-center align-items-center position-relative mb-5">
                         {ron.item_video_link == null ? (
                           <Image
                             className="img-fluid mb-3"

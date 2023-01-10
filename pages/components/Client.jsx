@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
-import VideoThumb from "../../public/clients/video-thumb.jpg";
 import ReactPlayer from "react-player";
 export default function Client() {
   const [document, setDocument] = useState([]);
@@ -62,7 +61,7 @@ export default function Client() {
                         {ron.item_video_link == null ? (
                           <Image
                             className="img-fluid mb-3"
-                            src={VideoThumb}
+                            src={ron.item_image}
                             alt="car"
                             width={1920}
                             height={0}
@@ -81,8 +80,6 @@ export default function Client() {
       </div>
     );
   });
-
-  const playButton = {};
 
   return <>{moduleName}</>;
 }
